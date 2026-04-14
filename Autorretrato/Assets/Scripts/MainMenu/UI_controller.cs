@@ -1,0 +1,57 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class UI_controller : MonoBehaviour
+{
+    public AudioSource audioSource_Click;
+
+    public GameObject canvas;
+    public Transform pInicio;
+    public Transform pCreditos;
+    public Transform pOpciones;
+
+    public string nombreEscena;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    public void Jugar()
+    {
+        SceneManager.LoadScene(nombreEscena);
+    }
+
+    public void Salir()
+    {
+        audioSource_Click.Play();
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                                    Application.Quit();
+        #endif
+    }
+
+    public void irACreditos()
+    {
+        audioSource_Click.Play();
+        pInicio.gameObject.SetActive(false);
+        pCreditos.gameObject.SetActive(true);
+    }
+
+    public void irAOpciones()
+    {
+        audioSource_Click.Play(); 
+        pInicio.gameObject.SetActive(false);
+        pOpciones.gameObject.SetActive(true);
+    }
+
+    public void volverAlMenu()
+    {
+        pInicio.gameObject.SetActive(true);
+        pOpciones.gameObject.SetActive(false);
+        pCreditos.gameObject.SetActive(false);
+    }
+}
