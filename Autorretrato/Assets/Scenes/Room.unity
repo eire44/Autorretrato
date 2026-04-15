@@ -1557,6 +1557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskUI: {fileID: 820551241}
+  isAgenda: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,6 +2215,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winScreen: {fileID: 981115841}
+  levels:
+  - tasksAmount: 3
+    tasks:
+    - taskName: 'Ordenar ropa
+
+        2 hs'
+      taskObject: {fileID: 1632517113}
+    - taskName: 'Develop game
+
+        5 hs'
+      taskObject: {fileID: 1145277259}
+    - taskName: 'Portrait Drawing
+
+        3 hs'
+      taskObject: {fileID: 1767984423}
 --- !u!114 &594797086
 MonoBehaviour:
   m_ObjectHideFlags: 0

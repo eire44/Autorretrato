@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[SerializeField]
+[Serializable]
 public class Task
 {
-    public string taskName = "";
+    [TextArea] public string taskName = "";
     public GameObject taskObject;
 }

@@ -23,7 +23,7 @@ public class Player_Interact : MonoBehaviour
             {
                 if(currentInteractiveObject != null)
                 {
-                    TaskManager taskMng = currentInteractiveObject.GetComponent<TaskManager>(); //condVic:PuzzMan
+                    TaskManager taskMng = currentInteractiveObject.GetComponent<TaskManager>();
                     taskMng.openTaskUI();
                 }
             }

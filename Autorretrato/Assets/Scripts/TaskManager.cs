@@ -6,7 +6,7 @@ public class TaskManager : PuzzleManager
 {
     public override bool puzzleTaskCompleted { get => base.puzzleTaskCompleted; set => base.puzzleTaskCompleted = value; }
     public GameObject taskUI;
-    
+    public bool isAgenda;
 
     public void openTaskUI()
     {
@@ -41,6 +41,15 @@ public class TaskManager : PuzzleManager
         if (allDropZonesCorrect)
         {
             endTask();
+            GameManager gm = FindObjectOfType<GameManager>();
+            if (isAgenda)
+            {
+                gm.activateTasks();
+            }
+            else
+            {
+                gm.taskCompleted();
+            }
         }
     }
 
@@ -50,6 +59,5 @@ public class TaskManager : PuzzleManager
         bubble.gameObject.SetActive(false);
         gameObject.layer = LayerMask.NameToLayer("Default");
         FindObjectOfType<Player_Interact>().taskCompleted();
-        FindObjectOfType<GameManager>().taskCompleted();
     }
 }
