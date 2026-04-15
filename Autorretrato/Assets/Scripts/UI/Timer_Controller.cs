@@ -13,7 +13,7 @@ public class Timer_Controller : MonoBehaviour
     {
         if (tiempoRestante > 0)
         {
-            tiempoRestante -= Time.deltaTime;
+            tiempoRestante -= Time.unscaledDeltaTime;
             ActualizarUI();
         }
         else

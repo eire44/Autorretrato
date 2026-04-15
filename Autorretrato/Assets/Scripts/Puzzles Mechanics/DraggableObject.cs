@@ -9,7 +9,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public string id;
     Image image;
     [HideInInspector] public Transform parentAfterDrag;
-
+    [HideInInspector] public DropZone zone;
     RectTransform rectTransform;
     Vector2 originalSize;
     Vector3 originalScale;
@@ -38,6 +38,12 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         rectTransform.sizeDelta = originalSize;
         rectTransform.localScale = originalScale;
+
+        if(zone != null)
+        {
+            zone.draggablePlaced = false;
+            zone = null;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)

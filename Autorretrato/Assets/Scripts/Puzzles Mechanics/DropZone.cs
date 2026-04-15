@@ -6,27 +6,28 @@ using UnityEngine.EventSystems;
 public class DropZone : MonoBehaviour, IDropHandler
 {
     public string idCorrecto;
+    [HideInInspector] public bool draggablePlaced = false;
 
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
         DraggableObject piece = dropped.GetComponent<DraggableObject>();
 
-        RectTransform pieceRect = piece.GetComponent<RectTransform>();
-        RectTransform zoneRect = GetComponent<RectTransform>();
+        if(piece.id == idCorrecto)
+        {
+            RectTransform pieceRect = piece.GetComponent<RectTransform>();
+            RectTransform zoneRect = GetComponent<RectTransform>();
 
-        //piece.parentAfterDrag = transform;
+            pieceRect.SetParent(zoneRect);
 
-        // Cambiar padre (MUY IMPORTANTE)
-        pieceRect.SetParent(zoneRect);
+            pieceRect.anchoredPosition = Vector2.zero;
 
-        // Centrar
-        pieceRect.anchoredPosition = Vector2.zero;
+            pieceRect.sizeDelta = zoneRect.sizeDelta;
 
-        // Igualar tamaño
-        pieceRect.sizeDelta = zoneRect.sizeDelta;
+            pieceRect.localScale = Vector3.one;
 
-        // Resetear escala
-        pieceRect.localScale = Vector3.one;
+            draggablePlaced = true;
+            piece.zone = this;
+        }
     }
 }
