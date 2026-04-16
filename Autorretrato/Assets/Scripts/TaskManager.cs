@@ -2,53 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TaskManager : PuzzleManager
+public class TaskManager : MonoBehaviour
 {
-    public override bool puzzleTaskCompleted { get => base.puzzleTaskCompleted; set => base.puzzleTaskCompleted = value; }
     public GameObject taskUI;
+    public GameObject HUD;
     public bool isAgenda;
 
     public void openTaskUI()
     {
         taskUI.SetActive(true);
+        HUD.SetActive(false);
         Time.timeScale = 0f;
     }
 
     public void closeTaskUI()
     {
         taskUI.SetActive(false);
+        HUD.SetActive(true);
         Time.timeScale = 1f;
         //bajar energia
-        checkIfTaskCompleted();
-    }
-
-    public override void checkIfTaskCompleted()
-    {
-        bool allDropZonesCorrect = true;
-        foreach (Transform UIitem in taskUI.transform)
+        PuzzleManager checkTask = gameObject.GetComponent<PuzzleManager>();
+        if(checkTask != null)
         {
-            DropZone dropZone = UIitem.GetComponent<DropZone>();
-            if (dropZone != null)
+            if (checkTask.checkIfTaskCompleted(taskUI))
             {
-                if(!dropZone.draggablePlaced)
+                endTask();
+                GameManager gm = FindObjectOfType<GameManager>();
+                if (isAgenda)
                 {
-                    allDropZonesCorrect = false;
-                    return;
+                    gm.activateTasks();
                 }
-            }
-        }
-
-        if (allDropZonesCorrect)
-        {
-            endTask();
-            GameManager gm = FindObjectOfType<GameManager>();
-            if (isAgenda)
-            {
-                gm.activateTasks();
-            }
-            else
-            {
-                gm.taskCompleted();
+                else
+                {
+                    gm.taskCompleted();
+                }
             }
         }
     }

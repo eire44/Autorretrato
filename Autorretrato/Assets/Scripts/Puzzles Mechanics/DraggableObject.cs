@@ -42,6 +42,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if(zone != null)
         {
             zone.draggablePlaced = false;
+            zone.idCorrecto = zone.idOriginal;
             zone = null;
         }
     }
