@@ -18,7 +18,7 @@ public class checkTask_ReadBook : PuzzleManager
                 }
                 else
                 {
-                    if(dropZone.idCorrecto == orderId.ToString())
+                    if(dropZone.idCorrecto == orderId)
                     {
                         orderId++;
                     }

@@ -14,14 +14,22 @@ public class checkTask_Portrait : PuzzleManager
             {
                 if (!draggable.draggablePlaced)
                 {
+                    Debug.Log(draggable.name + " not placed");
                     return false;
                 }
                 else
                 {
-                    if (draggable.id + 1 != dropZone.idCorrecto || int.Parse(dropZone.idCorrecto) == -1)
+                    if(dropZone.idCorrecto != -1)
                     {
-                        return false;
+                        Debug.Log(draggable.name + " is not -1");
+                        if (int.Parse(draggable.id) + 1 != dropZone.idCorrecto)
+                        {
+                            //Debug.Log(draggable.name + " wrong id");
+                            //Debug.Log((draggable.id + 1) + " ");
+                            return false;
+                        }
                     }
+                    
                 }
             }
         }

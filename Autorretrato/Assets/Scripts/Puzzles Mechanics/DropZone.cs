@@ -5,8 +5,8 @@ using UnityEngine.EventSystems;
 
 public class DropZone : MonoBehaviour, IDropHandler
 {
-    public string idCorrecto;
-    [HideInInspector] public string idOriginal;
+    public int idCorrecto;
+    [HideInInspector] public int idOriginal;
     [HideInInspector] public bool draggablePlaced = false;
 
     private void Start()
@@ -19,7 +19,7 @@ public class DropZone : MonoBehaviour, IDropHandler
         GameObject dropped = eventData.pointerDrag;
         DraggableObject piece = dropped.GetComponent<DraggableObject>();
 
-        if(piece.id == idCorrecto || int.Parse(idCorrecto) == -1)
+        if(int.Parse(piece.id) == idCorrecto || idCorrecto == -1)
         {
             RectTransform pieceRect = piece.GetComponent<RectTransform>();
             RectTransform zoneRect = GetComponent<RectTransform>();
@@ -36,9 +36,9 @@ public class DropZone : MonoBehaviour, IDropHandler
             piece.zone = this;
             piece.draggablePlaced = true;
 
-            if (int.Parse(idCorrecto) == -1 && int.Parse(piece.id) != -1)
+            if (idCorrecto == -1 && int.Parse(piece.id) != -1)
             {
-                idCorrecto = piece.id;
+                idCorrecto = int.Parse(piece.id);
             }
         }
     }

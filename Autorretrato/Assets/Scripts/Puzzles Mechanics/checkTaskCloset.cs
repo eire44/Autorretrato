@@ -10,7 +10,7 @@ public class checkTaskCloset : PuzzleManager
     {
         foreach (DropZoneGroups dzG in dzGroupsList.dzGroups)
         {
-            string groupID = "";
+            int groupID = -1;
             bool takeOneID = true;
             foreach (DropZone dz in dzG.dzGroups)
             {
