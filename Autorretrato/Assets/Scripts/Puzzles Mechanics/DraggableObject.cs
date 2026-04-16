@@ -13,6 +13,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     RectTransform rectTransform;
     Vector2 originalSize;
     Vector3 originalScale;
+    [HideInInspector] public bool draggablePlaced = false;
 
     void Awake()
     {
@@ -42,6 +43,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if(zone != null)
         {
             zone.draggablePlaced = false;
+            draggablePlaced = false;
             zone.idCorrecto = zone.idOriginal;
             zone = null;
         }

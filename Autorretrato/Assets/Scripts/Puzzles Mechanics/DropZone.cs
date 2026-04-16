@@ -34,6 +34,7 @@ public class DropZone : MonoBehaviour, IDropHandler
 
             draggablePlaced = true;
             piece.zone = this;
+            piece.draggablePlaced = true;
 
             if (int.Parse(idCorrecto) == -1 && int.Parse(piece.id) != -1)
             {
