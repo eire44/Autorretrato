@@ -2771,7 +2771,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 480429787}
+      - m_Target: {fileID: 1767984428}
         m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
         m_MethodName: closeTaskUI
         m_Mode: 1
@@ -4691,7 +4691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &796768562
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11052,7 +11052,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1424624727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13489,6 +13489,8 @@ GameObject:
   - component: {fileID: 1767984425}
   - component: {fileID: 1767984424}
   - component: {fileID: 1767984427}
+  - component: {fileID: 1767984428}
+  - component: {fileID: 1767984429}
   m_Layer: 0
   m_Name: CosyCabin_Objects_Simple_70
   m_TagString: Untagged
@@ -13654,6 +13656,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3611252, y: 1.6240181}
   m_EdgeRadius: 0
+--- !u!114 &1767984428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767984423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5297deebe35d1640b8b017516861df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskUI: {fileID: 796768561}
+  HUD: {fileID: 1424624726}
+  isAgenda: 0
+--- !u!114 &1767984429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767984423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbec66797b614d241ad03186bc75f6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1781435473
 GameObject:
   m_ObjectHideFlags: 0
