@@ -19,7 +19,7 @@ public class DropZone : MonoBehaviour, IDropHandler
         GameObject dropped = eventData.pointerDrag;
         DraggableObject piece = dropped.GetComponent<DraggableObject>();
 
-        if(piece.id == idCorrecto || int.Parse(idCorrecto) == 0)
+        if(piece.id == idCorrecto || int.Parse(idCorrecto) == -1)
         {
             RectTransform pieceRect = piece.GetComponent<RectTransform>();
             RectTransform zoneRect = GetComponent<RectTransform>();
@@ -35,7 +35,7 @@ public class DropZone : MonoBehaviour, IDropHandler
             draggablePlaced = true;
             piece.zone = this;
 
-            if (int.Parse(idCorrecto) == 0 && int.Parse(piece.id) != 0)
+            if (int.Parse(idCorrecto) == -1 && int.Parse(piece.id) != -1)
             {
                 idCorrecto = piece.id;
             }
