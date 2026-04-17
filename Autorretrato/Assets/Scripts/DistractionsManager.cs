@@ -25,19 +25,20 @@ public class DistractionsManager : MonoBehaviour
         //PuzzleManager checkTask = gameObject.GetComponent<PuzzleManager>();
         //if (checkTask != null)
         //{
-        //    if (checkTask.checkIfTaskCompleted(taskUI))
-        //    {
-        //        endTask();
-        //        GameManager gm = FindObjectOfType<GameManager>();
-        //        if (isAgenda)
-        //        {
-        //            gm.activateTasks();
-        //        }
-        //        else
-        //        {
-        //            gm.taskCompleted();
-        //        }
-        //    }
+        //    checkTask.checkIfTaskCompleted(distractionUI);
+            //    if (checkTask.checkIfTaskCompleted(taskUI))
+            //    {
+            //        endTask();
+            //        GameManager gm = FindObjectOfType<GameManager>();
+            //        if (isAgenda)
+            //        {
+            //            gm.activateTasks();
+            //        }
+            //        else
+            //        {
+            //            gm.taskCompleted();
+            //        }
+            //    }
         //}
     }
 }

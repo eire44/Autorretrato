@@ -31,29 +31,5 @@ public class checkTaskCloset : PuzzleManager
         }
 
         return true;
-        //foreach (Transform UIitem in taskUI.transform)
-        //{
-        //    DropZone dropZone = UIitem.GetComponent<DropZone>();
-        //    if (dropZone != null)
-        //    {
-        //        string id = dropZone.idCorrecto;
-        //        DropZoneGroups dzGroup = dropZone.GetComponent<DropZoneGroups>();
-        //        if (dzGroup != null)
-        //        {
-        //            foreach (DropZone dzG in dzGroup.dzGroups)
-        //            {
-        //                if(dzG.draggablePlaced)
-        //                {
-        //                    if (dzG.idCorrecto != id)
-        //                    {
-        //                        return false;
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-
-        //return true;
     }
 }

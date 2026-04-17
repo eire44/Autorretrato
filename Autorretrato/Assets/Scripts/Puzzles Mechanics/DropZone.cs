@@ -8,7 +8,7 @@ public class DropZone : MonoBehaviour, IDropHandler
     public int idCorrecto;
     [HideInInspector] public int idOriginal;
     [HideInInspector] public bool draggablePlaced = false;
-
+    [HideInInspector] public GameObject draggedObject;
     private void Start()
     {
         idOriginal = idCorrecto;
@@ -35,6 +35,7 @@ public class DropZone : MonoBehaviour, IDropHandler
             draggablePlaced = true;
             piece.zone = this;
             piece.draggablePlaced = true;
+            draggedObject = piece.gameObject;
 
             if (idCorrecto == -1 && int.Parse(piece.id) != -1)
             {

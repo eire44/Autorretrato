@@ -27,9 +27,17 @@ public class Player_Interact : MonoBehaviour
                 {
                     TaskManager taskMng = currentInteractiveObject.GetComponent<TaskManager>();
                     taskMng.openTaskUI();
-                } else if(currentDistractionObject != null)
+                }
+            }
+        }
+        else if (onDistractionArea)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (currentDistractionObject != null)
                 {
-
+                    DistractionsManager distractionMng = currentDistractionObject.GetComponent<DistractionsManager>();
+                    distractionMng.openTaskUI();
                 }
             }
         }
