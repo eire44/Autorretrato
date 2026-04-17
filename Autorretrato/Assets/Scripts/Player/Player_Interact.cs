@@ -5,8 +5,10 @@ using UnityEngine;
 public class Player_Interact : MonoBehaviour
 {
     public Color bubbleColor_On;
-    bool onArea = false;
+    bool onInteractiveArea = false;
+    bool onDistractionArea = false;
     GameObject currentInteractiveObject;
+    GameObject currentDistractionObject;
     //public Color bubbleColor_Off;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,7 @@ public class Player_Interact : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(onArea)
+        if(onInteractiveArea)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -25,6 +27,9 @@ public class Player_Interact : MonoBehaviour
                 {
                     TaskManager taskMng = currentInteractiveObject.GetComponent<TaskManager>();
                     taskMng.openTaskUI();
+                } else if(currentDistractionObject != null)
+                {
+
                 }
             }
         }
@@ -36,8 +41,13 @@ public class Player_Interact : MonoBehaviour
         {
             Transform bubble = collision.transform.Find("Bubble");
             bubble.GetComponent<Renderer>().material.color = bubbleColor_On;
-            onArea = true;
+            onInteractiveArea = true;
             currentInteractiveObject = collision.gameObject;
+        }
+        else if(collision.gameObject.layer == LayerMask.NameToLayer("Distraction Objects"))
+        {
+            onDistractionArea = true;
+            currentDistractionObject = collision.gameObject;
         }
     }
 
@@ -47,14 +57,19 @@ public class Player_Interact : MonoBehaviour
         {
             Transform bubble = collision.transform.Find("Bubble");
             bubble.GetComponent<Renderer>().material.color = Color.white;
-            onArea = false;
+            onInteractiveArea = false;
             currentInteractiveObject = null;
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Distraction Objects"))
+        {
+            onDistractionArea = false;
+            currentDistractionObject = null;
         }
     }
 
     public void taskCompleted()
     {
-        onArea = false;
+        onInteractiveArea = false;
         currentInteractiveObject = null;
     }
 }

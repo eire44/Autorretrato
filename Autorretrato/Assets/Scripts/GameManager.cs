@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     int completeTasksIndex = 0;
     int tasksLeft = 0;
     public GameObject winScreen;
+    public GameObject HUD;
     public Image energyFiller;
     public List<Levels_Controller> levels = new List<Levels_Controller>();
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
         if(completeTasksIndex >= levels[levelIndex].tasksAmount) 
         {
             winScreen.SetActive(true);
+            HUD.SetActive(false);
             Time.timeScale = 0f;
         }
     }
