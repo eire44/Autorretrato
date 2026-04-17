@@ -50,6 +50,7 @@ public class UI_controller : MonoBehaviour
 
     public void volverAlMenu()
     {
+        audioSource_Click.Play();
         pInicio.gameObject.SetActive(true);
         pOpciones.gameObject.SetActive(false);
         pCreditos.gameObject.SetActive(false);
