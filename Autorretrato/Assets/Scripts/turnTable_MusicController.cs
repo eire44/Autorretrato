@@ -10,7 +10,7 @@ public class turnTable_MusicController : MonoBehaviour
     public AudioSource audioSource;
     DropZone dZ;
     bool playSong = true;
-
+    bool addEnergy = true;
     private void Start()
     {
         dZ = GetComponent<DropZone>();
@@ -24,7 +24,13 @@ public class turnTable_MusicController : MonoBehaviour
             if(song != null)
             {
                 txtSong.text = "Playing: " + song.songName;
-                if(playSong)
+                if(addEnergy)
+                {
+                    addEnergy = false;
+                    FindObjectOfType<GameManager>().AddEnergy();
+                }
+                
+                if (playSong)
                 {
                     playSong = false;
                     audioSource.PlayOneShot(song.clipToPlay);

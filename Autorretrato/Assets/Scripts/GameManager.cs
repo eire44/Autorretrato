@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public GameObject HUD;
     public Image energyFiller;
     public List<Levels_Controller> levels = new List<Levels_Controller>();
+    public Sprite[] avatarFeelings;
+    public Image currentFeeling;
+    public UI_Controller UI_Controller;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,16 +51,52 @@ public class GameManager : MonoBehaviour
 
     public void reduceEnergy(bool taskCompleted)
     {
-        float reductionPerTask = 1f / levels[levelIndex].tasksAmount;
-        if (taskCompleted)
+        //float reductionPerTask = 1f / levels[levelIndex].tasksAmount;
+        //if (taskCompleted)
+        //{
+        //    //energyFiller.fillAmount = levels[levelIndex].tasksAmount / tasksLeft;}
+        //    energyFiller.fillAmount = reductionPerTask;
+        //}
+        //else
+        //{
+        //    energyFiller.fillAmount = reductionPerTask / 3; ;
+        //}
+        float amount = 1f / levels[levelIndex].tasksAmount;
+
+        if (!taskCompleted)
+            amount /= 3f;
+
+        energyFiller.fillAmount -= amount;
+
+        checkEnergy();
+    }
+
+    public void AddEnergy()
+    {
+        float amount = 1f / levels[levelIndex].tasksAmount;
+
+        energyFiller.fillAmount += amount;
+
+        checkEnergy();
+    }
+
+    void checkEnergy()
+    {
+        if (energyFiller.fillAmount <= 0f)
         {
-            //energyFiller.fillAmount = levels[levelIndex].tasksAmount / tasksLeft;}
-            energyFiller.fillAmount = reductionPerTask;
+            UI_Controller.showEndGameScreen();
+        }
+        else if (energyFiller.fillAmount <= 0.33f)
+        {
+            currentFeeling.sprite = avatarFeelings[2];
+        }
+        else if (energyFiller.fillAmount <= 0.66f)
+        {
+            currentFeeling.sprite = avatarFeelings[1];
         }
         else
         {
-            energyFiller.fillAmount = reductionPerTask / 3; ;
+            currentFeeling.sprite = avatarFeelings[0];
         }
-        
     }
 }

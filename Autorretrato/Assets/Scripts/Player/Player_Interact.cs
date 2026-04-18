@@ -54,6 +54,8 @@ public class Player_Interact : MonoBehaviour
         }
         else if(collision.gameObject.layer == LayerMask.NameToLayer("Distraction Objects"))
         {
+            Transform bubble = collision.transform.Find("Bubble");
+            bubble.GetComponent<Renderer>().material.color = bubbleColor_On;
             onDistractionArea = true;
             currentDistractionObject = collision.gameObject;
         }
@@ -70,6 +72,8 @@ public class Player_Interact : MonoBehaviour
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Distraction Objects"))
         {
+            Transform bubble = collision.transform.Find("Bubble");
+            bubble.GetComponent<Renderer>().material.color = Color.white;
             onDistractionArea = false;
             currentDistractionObject = null;
         }

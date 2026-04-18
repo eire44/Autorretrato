@@ -32,13 +32,13 @@ public class TaskManager : MonoBehaviour
         Time.timeScale = 1f;
         //bajar energia
         PuzzleManager checkTask = gameObject.GetComponent<PuzzleManager>();
-        if(checkTask != null)
+        GameManager gm = FindObjectOfType<GameManager>();
+        if (checkTask != null)
         {
             if (checkTask.checkIfTaskCompleted(taskUI))
             {
                 endTask();
                 dialogsController.changeDialogTxt("...");
-                GameManager gm = FindObjectOfType<GameManager>();
                 if (isAgenda)
                 {
                     gm.activateTasks();
@@ -46,11 +46,13 @@ public class TaskManager : MonoBehaviour
                 else
                 {
                     gm.taskCompleted();
+                    gm.reduceEnergy(true);
                 }
             }
             else
             {
                 dialogsController.changeDialogTxt(txtDialog);
+                gm.reduceEnergy(true);
             }
         }
     }

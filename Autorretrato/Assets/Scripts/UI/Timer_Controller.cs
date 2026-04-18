@@ -7,8 +7,15 @@ public class Timer_Controller : MonoBehaviour
 {
     public float tiempoRestante = 60f;
     public TextMeshProUGUI textoTiempo;
-
+    float tiempoTotal;
     bool flagEndGame = true;
+    public AudioSource clockSound;
+    bool playClock = true;
+
+    private void Start()
+    {
+        tiempoTotal = tiempoRestante;
+    }
     void Update()
     {
         if (tiempoRestante > 0)
@@ -25,6 +32,22 @@ public class Timer_Controller : MonoBehaviour
                 ActualizarUI();
                 FinDelTiempo();
             }
+        }
+
+        if(tiempoRestante > tiempoTotal / 4)
+        {
+            textoTiempo.color = Color.black;
+            playClock = true;
+        }
+        else
+        {
+            textoTiempo.color = Color.red;
+            if(playClock)
+            {
+                playClock = false;
+                clockSound.Play();
+            }
+            
         }
     }
 
