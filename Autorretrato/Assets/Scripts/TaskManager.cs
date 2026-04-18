@@ -8,6 +8,13 @@ public class TaskManager : MonoBehaviour
     public GameObject HUD;
     public bool isAgenda;
     public AudioSource uiClick;
+    public string txtDialog;
+    Dialogs_Controller dialogsController;
+
+    private void Start()
+    {
+        dialogsController = FindObjectOfType<Dialogs_Controller>();
+    }
 
     public void openTaskUI()
     {
@@ -30,6 +37,7 @@ public class TaskManager : MonoBehaviour
             if (checkTask.checkIfTaskCompleted(taskUI))
             {
                 endTask();
+                dialogsController.changeDialogTxt("...");
                 GameManager gm = FindObjectOfType<GameManager>();
                 if (isAgenda)
                 {
@@ -39,6 +47,10 @@ public class TaskManager : MonoBehaviour
                 {
                     gm.taskCompleted();
                 }
+            }
+            else
+            {
+                dialogsController.changeDialogTxt(txtDialog);
             }
         }
     }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class checkTaskCloset : PuzzleManager
 {
     public dzGroupsList dzGroupsList;
+    public GameObject clothes;
     public override bool checkIfTaskCompleted(GameObject taskUI)
     {
         foreach (DropZoneGroups dzG in dzGroupsList.dzGroups)
@@ -14,9 +15,9 @@ public class checkTaskCloset : PuzzleManager
             bool takeOneID = true;
             foreach (DropZone dz in dzG.dzGroups)
             {
-                if(dz.draggablePlaced)
+                if (dz.draggablePlaced)
                 {
-                    if(takeOneID)
+                    if (takeOneID)
                     {
                         takeOneID = false;
                         groupID = dz.idCorrecto;
@@ -26,7 +27,16 @@ public class checkTaskCloset : PuzzleManager
                         return false;
                     }
                 }
-                
+            }
+        }
+
+        DraggableObject[] draggables = clothes.GetComponentsInChildren<DraggableObject>();
+
+        foreach (DraggableObject d in draggables)
+        {
+            if (!d.draggablePlaced)
+            {
+                return false;
             }
         }
 
