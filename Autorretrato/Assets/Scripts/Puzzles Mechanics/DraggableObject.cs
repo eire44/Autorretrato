@@ -14,6 +14,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     Vector2 originalSize;
     Vector3 originalScale;
     [HideInInspector] public bool draggablePlaced = false;
+    public AudioSource draggableAudio;
 
     void Awake()
     {
@@ -28,6 +29,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        draggableAudio.Play();
         parentAfterDrag = transform.parent;
         //transform.SetParent(transform.root);
         transform.SetAsLastSibling();

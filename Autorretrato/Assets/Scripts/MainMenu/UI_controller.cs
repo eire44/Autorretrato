@@ -13,14 +13,10 @@ public class UI_controller : MonoBehaviour
     public Transform pOpciones;
 
     public string nombreEscena;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
     public void Jugar()
     {
+        audioSource_Click.Play();
         SceneManager.LoadScene(nombreEscena);
     }
 

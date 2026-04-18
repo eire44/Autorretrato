@@ -9,6 +9,7 @@ public class DropZone : MonoBehaviour, IDropHandler
     [HideInInspector] public int idOriginal;
     [HideInInspector] public bool draggablePlaced = false;
     [HideInInspector] public GameObject draggedObject;
+    public AudioSource droppedAudio;
     private void Start()
     {
         idOriginal = idCorrecto;
@@ -16,6 +17,7 @@ public class DropZone : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
+        droppedAudio.Play();
         GameObject dropped = eventData.pointerDrag;
         DraggableObject piece = dropped.GetComponent<DraggableObject>();
 

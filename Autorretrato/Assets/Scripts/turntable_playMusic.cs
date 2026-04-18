@@ -7,4 +7,5 @@ using TMPro;
 public class turntable_playMusic : MonoBehaviour
 {
     public string songName = "";
+    public AudioClip clipToPlay;
 }

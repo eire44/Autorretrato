@@ -7,7 +7,7 @@ using UnityEngine;
 public class turnTable_MusicController : MonoBehaviour
 {
     public TMP_Text txtSong;
-    //public AudioClip clipToPlay;
+    public AudioSource audioSource;
     DropZone dZ;
 
     private void Start()
@@ -23,12 +23,14 @@ public class turnTable_MusicController : MonoBehaviour
             if(song != null)
             {
                 txtSong.text = "Playing: " + song.songName;
+                audioSource.PlayOneShot(song.clipToPlay);
             }
             
         }
         else
         {
             txtSong.text = "No music playing";
+            audioSource.Stop();
         }
     }
 }

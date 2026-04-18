@@ -445,6 +445,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &15061161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,6 +484,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15061158}
   m_CullTransparentMesh: 1
+--- !u!1 &54389408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 54389409}
+  - component: {fileID: 54389410}
+  m_Layer: 0
+  m_Name: Draggable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &54389409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54389408}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1436455453}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &54389410
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54389408}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7dd7109e4c8d35e418b5cecd2909b44b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &54925364
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +741,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &57133566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,6 +834,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &60354514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,6 +927,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &77887265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,6 +1022,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &89495549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,6 +1077,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &89495552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,6 +1144,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &113595131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,6 +1368,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &195467619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1363,6 +1499,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!1 &270561982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1554,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &270561985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,6 +1647,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &315732956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1601,6 +1740,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &344605174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1827,6 +1967,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &381580094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1957,6 +2098,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &394416850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,6 +2153,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &394416853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2569,6 +2712,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &513242307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513242308}
+  - component: {fileID: 513242309}
+  m_Layer: 0
+  m_Name: Dropped
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &513242308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513242307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1436455453}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &513242309
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513242307}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e30acde204c663f4ea20ddb4c6ca40a2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &515337683
 GameObject:
   m_ObjectHideFlags: 0
@@ -3079,6 +3350,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!1 &569884995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,6 +4218,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &639720396
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,6 +4312,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &639747503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4094,6 +4368,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &639747506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4145,6 +4420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: '"Mi Tierra" by Nino Bravo'
+  clipToPlay: {fileID: 8300000, guid: 0bcd76fc747b6a347bc734c151d34904, type: 3}
 --- !u!1 &660620481
 GameObject:
   m_ObjectHideFlags: 0
@@ -4201,6 +4477,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &660620484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4255,6 +4532,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &660620487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4481,6 +4759,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &728827940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4535,6 +4814,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &728827943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5202,6 +5482,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &801781475
 GameObject:
   m_ObjectHideFlags: 0
@@ -5391,6 +5672,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820551241}
   m_CullTransparentMesh: 1
+--- !u!1 &833725838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833725840}
+  - component: {fileID: 833725839}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &833725839
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833725838}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 759ed977a61482846bbe3be558eb7f06, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &833725840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833725838}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1436455453}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &859473360
 GameObject:
   m_ObjectHideFlags: 0
@@ -5445,6 +5854,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &859473363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5711,6 +6121,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!1 &885045769
 GameObject:
   m_ObjectHideFlags: 0
@@ -5804,6 +6215,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &892057090
 GameObject:
   m_ObjectHideFlags: 0
@@ -5859,6 +6271,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &892057093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5910,6 +6323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: '"Vicarious" by Tool'
+  clipToPlay: {fileID: 8300000, guid: 8d8e3e329a6bb4b4e8ab9e3fa8476623, type: 3}
 --- !u!1 &934915828
 GameObject:
   m_ObjectHideFlags: 0
@@ -6114,6 +6528,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &946194124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6165,6 +6580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtSong: {fileID: 1502671679}
+  audioSource: {fileID: 991023548}
 --- !u!1 &956719679
 GameObject:
   m_ObjectHideFlags: 0
@@ -6619,6 +7035,7 @@ GameObject:
   - component: {fileID: 982079661}
   - component: {fileID: 982079663}
   - component: {fileID: 982079664}
+  - component: {fileID: 982079665}
   m_Layer: 0
   m_Name: UI Controller
   m_TagString: Untagged
@@ -6686,6 +7103,102 @@ MonoBehaviour:
   - I have so much to do... and time passes so quickly. Please help me organize my
     day on my agenda.
   dialogText: {fileID: 1250357170}
+--- !u!82 &982079665
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982079660}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8449c87df6184bd44a3670cb295669a6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &991023542
 GameObject:
   m_ObjectHideFlags: 0
@@ -6699,6 +7212,7 @@ GameObject:
   - component: {fileID: 991023546}
   - component: {fileID: 991023545}
   - component: {fileID: 991023547}
+  - component: {fileID: 991023548}
   m_Layer: 7
   m_Name: toca discos sin pua
   m_TagString: Untagged
@@ -6879,6 +7393,102 @@ MonoBehaviour:
   distractionUI: {fileID: 1186447120}
   HUD: {fileID: 1424624726}
   isAgenda: 0
+--- !u!82 &991023548
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991023542}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 042258c14a749284e8b76bb04b81e367, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 5
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &992503272
 GameObject:
   m_ObjectHideFlags: 0
@@ -6933,6 +7543,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &992503275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7161,6 +7772,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1024846142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7291,6 +7903,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1053673658
 GameObject:
   m_ObjectHideFlags: 0
@@ -7559,6 +8172,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1074136789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7764,6 +8378,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1109171620
 GameObject:
   m_ObjectHideFlags: 0
@@ -7856,6 +8471,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1129206517
 GameObject:
   m_ObjectHideFlags: 0
@@ -10418,6 +11034,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &1159997460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10469,6 +11086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: '"Natural Born Killer" by Avenged Sevenfold'
+  clipToPlay: {fileID: 8300000, guid: 042258c14a749284e8b76bb04b81e367, type: 3}
 --- !u!1 &1186447120
 GameObject:
   m_ObjectHideFlags: 0
@@ -10647,6 +11265,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1216399097
 GameObject:
   m_ObjectHideFlags: 0
@@ -10701,6 +11320,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1216399100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10961,6 +11581,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1250357167
 GameObject:
   m_ObjectHideFlags: 0
@@ -11392,6 +12013,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1364932910
 GameObject:
   m_ObjectHideFlags: 0
@@ -11751,6 +12373,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1391776787
 GameObject:
   m_ObjectHideFlags: 0
@@ -11805,6 +12428,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1391776790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12031,6 +12655,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1416809499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12257,6 +12882,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434164156}
   m_CullTransparentMesh: 1
+--- !u!1 &1436455452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1436455453}
+  m_Layer: 0
+  m_Name: Audios
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1436455453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436455452}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.4392076, y: -0.27214575, z: -0.046203636}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 833725840}
+  - {fileID: 54389409}
+  - {fileID: 513242308}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1440401962
 GameObject:
   m_ObjectHideFlags: 0
@@ -12311,6 +12970,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1440401965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12441,6 +13101,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1467478403
 GameObject:
   m_ObjectHideFlags: 0
@@ -12578,6 +13239,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1475041004
 GameObject:
   m_ObjectHideFlags: 0
@@ -12919,6 +13581,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &1516631759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12973,6 +13636,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1516631762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13175,6 +13839,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &1553324053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13229,6 +13894,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1553324056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13295,6 +13961,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1570721510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13389,6 +14056,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &1575694165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13443,6 +14111,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1575694168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13547,6 +14216,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1596112170
 GameObject:
   m_ObjectHideFlags: 0
@@ -14472,6 +15142,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1646159658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14564,6 +15235,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1667144567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14656,6 +15328,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1713722634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15273,6 +15946,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1781435476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15410,6 +16084,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1803173950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15503,6 +16178,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &1806194801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15554,6 +16230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: '"Let it Be" by The Beatles'
+  clipToPlay: {fileID: 8300000, guid: fba2fc41d8688fd4f89fb519ba528b64, type: 3}
 --- !u!1 &1818653683
 GameObject:
   m_ObjectHideFlags: 0
@@ -15609,6 +16286,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &1818653686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15660,6 +16338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: '"Exist for Love" by Aurora'
+  clipToPlay: {fileID: 8300000, guid: 042258c14a749284e8b76bb04b81e367, type: 3}
 --- !u!1 &1868380321
 GameObject:
   m_ObjectHideFlags: 0
@@ -15752,6 +16431,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1872012385
 GameObject:
   m_ObjectHideFlags: 0
@@ -15928,6 +16608,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1883524102
 GameObject:
   m_ObjectHideFlags: 0
@@ -16179,6 +16860,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1907322022
 GameObject:
   m_ObjectHideFlags: 0
@@ -16364,6 +17046,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &1930833074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16415,6 +17098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: "\"What I\xB4ve Done\" by Linkin Park"
+  clipToPlay: {fileID: 8300000, guid: 6eb2f919da08513478421b6d347bfaef, type: 3}
 --- !u!1 &1939457642
 GameObject:
   m_ObjectHideFlags: 0
@@ -16507,6 +17191,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1944183228
 GameObject:
   m_ObjectHideFlags: 0
@@ -16561,6 +17246,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &1944183231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16691,6 +17377,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &1957788862
 GameObject:
   m_ObjectHideFlags: 0
@@ -17119,6 +17806,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &2113210213
 GameObject:
   m_ObjectHideFlags: 0
@@ -17211,6 +17899,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!1 &2131157921
 GameObject:
   m_ObjectHideFlags: 0
@@ -17267,6 +17956,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
+  draggableAudio: {fileID: 0}
 --- !u!114 &2131157924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17321,6 +18011,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 0}
 --- !u!114 &2131157927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21396,3 +22087,4 @@ SceneRoots:
   - {fileID: 1792144984}
   - {fileID: 982079662}
   - {fileID: 594797084}
+  - {fileID: 1436455453}
