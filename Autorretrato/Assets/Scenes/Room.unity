@@ -445,7 +445,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &15061161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,7 +741,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &57133566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,7 +834,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &60354514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -927,7 +927,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &77887265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &89495549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1144,7 +1144,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &113595131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &195467619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,7 +1499,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!1 &270561982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &270561985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1647,7 +1647,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &315732956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1740,7 +1740,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &344605174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1967,7 +1967,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &381580094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2098,7 +2098,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &394416850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &394416853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2517,6 +2517,7 @@ MonoBehaviour:
   taskUI: {fileID: 972902081}
   HUD: {fileID: 1424624726}
   isAgenda: 0
+  uiClick: {fileID: 982079665}
 --- !u!1 &489877058
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,6 +3035,7 @@ MonoBehaviour:
   taskUI: {fileID: 820551241}
   HUD: {fileID: 1424624726}
   isAgenda: 1
+  uiClick: {fileID: 982079665}
 --- !u!114 &515337689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3350,7 +3352,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!1 &569884995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4218,7 +4220,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &639720396
 GameObject:
   m_ObjectHideFlags: 0
@@ -4312,7 +4314,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &639747503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4368,7 +4370,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &639747506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4477,7 +4479,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &660620484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4759,7 +4761,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &728827940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5482,7 +5484,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &801781475
 GameObject:
   m_ObjectHideFlags: 0
@@ -5854,7 +5856,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &859473363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6121,7 +6123,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!1 &885045769
 GameObject:
   m_ObjectHideFlags: 0
@@ -6215,7 +6217,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &892057090
 GameObject:
   m_ObjectHideFlags: 0
@@ -6271,7 +6273,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &892057093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6528,7 +6530,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &946194124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7393,6 +7395,7 @@ MonoBehaviour:
   distractionUI: {fileID: 1186447120}
   HUD: {fileID: 1424624726}
   isAgenda: 0
+  uiClick: {fileID: 982079665}
 --- !u!82 &991023548
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7543,7 +7546,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &992503275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7772,7 +7775,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1024846142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7903,7 +7906,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1053673658
 GameObject:
   m_ObjectHideFlags: 0
@@ -8172,7 +8175,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1074136789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8378,7 +8381,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1109171620
 GameObject:
   m_ObjectHideFlags: 0
@@ -8471,7 +8474,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1129206517
 GameObject:
   m_ObjectHideFlags: 0
@@ -11034,7 +11037,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &1159997460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11086,7 +11089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songName: '"Natural Born Killer" by Avenged Sevenfold'
-  clipToPlay: {fileID: 8300000, guid: 042258c14a749284e8b76bb04b81e367, type: 3}
+  clipToPlay: {fileID: 8300000, guid: b187451b7b921254887f0b376ac15316, type: 3}
 --- !u!1 &1186447120
 GameObject:
   m_ObjectHideFlags: 0
@@ -11265,7 +11268,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1216399097
 GameObject:
   m_ObjectHideFlags: 0
@@ -11320,7 +11323,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1216399100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11581,7 +11584,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1250357167
 GameObject:
   m_ObjectHideFlags: 0
@@ -12013,7 +12016,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1364932910
 GameObject:
   m_ObjectHideFlags: 0
@@ -12373,7 +12376,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1391776787
 GameObject:
   m_ObjectHideFlags: 0
@@ -12428,7 +12431,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1391776790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12655,7 +12658,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1416809499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12970,7 +12973,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1440401965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13101,7 +13104,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1467478403
 GameObject:
   m_ObjectHideFlags: 0
@@ -13239,7 +13242,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1475041004
 GameObject:
   m_ObjectHideFlags: 0
@@ -13581,7 +13584,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &1516631759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13839,7 +13842,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &1553324053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13961,7 +13964,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1570721510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14056,7 +14059,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &1575694165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14216,7 +14219,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1596112170
 GameObject:
   m_ObjectHideFlags: 0
@@ -14850,7 +14853,6 @@ GameObject:
   - component: {fileID: 1632517118}
   - component: {fileID: 1632517119}
   - component: {fileID: 1632517120}
-  - component: {fileID: 1632517121}
   m_Layer: 0
   m_Name: CosyCabin_Objects_Simple_179
   m_TagString: Untagged
@@ -15031,6 +15033,7 @@ MonoBehaviour:
   taskUI: {fileID: 662188625}
   HUD: {fileID: 1424624726}
   isAgenda: 0
+  uiClick: {fileID: 982079665}
 --- !u!114 &1632517119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15073,21 +15076,6 @@ MonoBehaviour:
     - {fileID: 859473362}
     - {fileID: 1944183230}
     - {fileID: 1391776789}
---- !u!114 &1632517121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632517113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5297deebe35d1640b8b017516861df9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  taskUI: {fileID: 0}
-  HUD: {fileID: 1424624726}
-  isAgenda: 0
 --- !u!1 &1646159655
 GameObject:
   m_ObjectHideFlags: 0
@@ -15142,7 +15130,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1646159658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15235,7 +15223,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1667144567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15328,7 +15316,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1713722634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15880,6 +15868,7 @@ MonoBehaviour:
   taskUI: {fileID: 796768561}
   HUD: {fileID: 1424624726}
   isAgenda: 0
+  uiClick: {fileID: 982079665}
 --- !u!114 &1767984429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15946,7 +15935,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1781435476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16084,7 +16073,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1803173950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16178,7 +16167,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &1806194801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16286,7 +16275,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &1818653686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16431,7 +16420,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1872012385
 GameObject:
   m_ObjectHideFlags: 0
@@ -16608,7 +16597,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1883524102
 GameObject:
   m_ObjectHideFlags: 0
@@ -16860,7 +16849,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1907322022
 GameObject:
   m_ObjectHideFlags: 0
@@ -17046,7 +17035,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &1930833074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17191,7 +17180,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1944183228
 GameObject:
   m_ObjectHideFlags: 0
@@ -17246,7 +17235,7 @@ MonoBehaviour:
   idOriginal: 0
   draggablePlaced: 0
   draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
 --- !u!114 &1944183231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17377,7 +17366,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &1957788862
 GameObject:
   m_ObjectHideFlags: 0
@@ -17806,7 +17795,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &2113210213
 GameObject:
   m_ObjectHideFlags: 0
@@ -17899,7 +17888,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!1 &2131157921
 GameObject:
   m_ObjectHideFlags: 0
@@ -17956,7 +17945,7 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
-  draggableAudio: {fileID: 0}
+  draggableAudio: {fileID: 54389410}
 --- !u!114 &2131157924
 MonoBehaviour:
   m_ObjectHideFlags: 0

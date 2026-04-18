@@ -9,6 +9,7 @@ public class turnTable_MusicController : MonoBehaviour
     public TMP_Text txtSong;
     public AudioSource audioSource;
     DropZone dZ;
+    bool playSong = true;
 
     private void Start()
     {
@@ -23,7 +24,11 @@ public class turnTable_MusicController : MonoBehaviour
             if(song != null)
             {
                 txtSong.text = "Playing: " + song.songName;
-                audioSource.PlayOneShot(song.clipToPlay);
+                if(playSong)
+                {
+                    playSong = false;
+                    audioSource.PlayOneShot(song.clipToPlay);
+                }
             }
             
         }
@@ -31,6 +36,7 @@ public class turnTable_MusicController : MonoBehaviour
         {
             txtSong.text = "No music playing";
             audioSource.Stop();
+            playSong = true;
         }
     }
 }

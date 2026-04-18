@@ -7,9 +7,11 @@ public class TaskManager : MonoBehaviour
     public GameObject taskUI;
     public GameObject HUD;
     public bool isAgenda;
+    public AudioSource uiClick;
 
     public void openTaskUI()
     {
+        uiClick.Play();
         taskUI.SetActive(true);
         HUD.SetActive(false);
         Time.timeScale = 0f;
@@ -17,6 +19,7 @@ public class TaskManager : MonoBehaviour
 
     public void closeTaskUI()
     {
+        uiClick.Play();
         taskUI.SetActive(false);
         HUD.SetActive(true);
         Time.timeScale = 1f;
