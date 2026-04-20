@@ -11,6 +11,7 @@ public class Timer_Controller : MonoBehaviour
     bool flagEndGame = true;
     public AudioSource clockSound;
     bool playClock = true;
+    public bool reduceTime = true;
 
     private void Start()
     {
@@ -20,8 +21,12 @@ public class Timer_Controller : MonoBehaviour
     {
         if (tiempoRestante > 0)
         {
-            tiempoRestante -= Time.unscaledDeltaTime;
-            ActualizarUI();
+            if (reduceTime)
+            {
+                tiempoRestante -= Time.unscaledDeltaTime;
+                ActualizarUI();
+            }
+            
         }
         else
         {
@@ -61,7 +66,6 @@ public class Timer_Controller : MonoBehaviour
 
     void FinDelTiempo()
     {
-        Debug.Log("Tiempo terminado");
-        FindObjectOfType<UI_Controller>().showEndGameScreen();
+        FindObjectOfType<UI_Controller>().showEndGameScreen("You ran out of time :(");
     }
 }

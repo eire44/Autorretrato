@@ -7,8 +7,7 @@ public class GameManager : MonoBehaviour
 {
     int levelIndex = 0;
     int completeTasksIndex = 0;
-    int tasksLeft = 0;
-    public GameObject winScreen;
+    public int tasksLeft = 0;
     public GameObject HUD;
     public Image energyFiller;
     public List<Levels_Controller> levels = new List<Levels_Controller>();
@@ -33,9 +32,7 @@ public class GameManager : MonoBehaviour
         tasksLeft--;
         if(completeTasksIndex >= levels[levelIndex].tasksAmount) 
         {
-            winScreen.SetActive(true);
-            HUD.SetActive(false);
-            Time.timeScale = 0f;
+            UI_Controller.showWinningScreen();
         }
     }
 
@@ -64,7 +61,7 @@ public class GameManager : MonoBehaviour
         float amount = 1f / levels[levelIndex].tasksAmount;
 
         if (!taskCompleted)
-            amount /= 3f;
+            amount /= 6f;
 
         energyFiller.fillAmount -= amount;
 
@@ -84,13 +81,13 @@ public class GameManager : MonoBehaviour
     {
         if (energyFiller.fillAmount <= 0f)
         {
-            UI_Controller.showEndGameScreen();
+            UI_Controller.showEndGameScreen("You´re out of energy :(");
         }
-        else if (energyFiller.fillAmount <= 0.33f)
+        else if (energyFiller.fillAmount <= 0.4f)
         {
             currentFeeling.sprite = avatarFeelings[2];
         }
-        else if (energyFiller.fillAmount <= 0.66f)
+        else if (energyFiller.fillAmount <= 0.7f)
         {
             currentFeeling.sprite = avatarFeelings[1];
         }
