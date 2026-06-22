@@ -12,22 +12,24 @@ public class turnTable_MusicController : Distractions_SpecificTasks
     bool playSong = true;
     bool addEnergy = true;
     HashSet<string> musicPlayed = new HashSet<string>();
+
+    string songPlaying = "No music playing";
+    //turntable_playMusic song;
     private void Start()
     {
         dZ = GetComponent<DropZone>();
+        txtSong.text = songPlaying;
+        //song = dZ.draggedObject.GetComponent<turntable_playMusic>();
     }
 
     private void Update()
     {
-        if (dZ.draggablePlaced)
-        {
-            turntable_playMusic song = dZ.draggedObject.GetComponent<turntable_playMusic>();
-            txtSong.text = "Playing: " + song.songName;
-        }
+        distractionTask();
     }
 
     public override void distractionTask()
     {
+        Debug.Log("ENTRA");
         if (dZ.draggablePlaced)
         {
             turntable_playMusic song = dZ.draggedObject.GetComponent<turntable_playMusic>();
@@ -41,6 +43,8 @@ public class turnTable_MusicController : Distractions_SpecificTasks
                 if (playSong)
                 {
                     playSong = false;
+                    songPlaying = song.songName;
+                    txtSong.text = songPlaying;
                     audioSource.PlayOneShot(song.clipToPlay);
                     musicPlayed.Add(song.songName);
                 }

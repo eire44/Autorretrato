@@ -7712,6 +7712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoRestante: 180
   textoTiempo: {fileID: 934915830}
+  flagEndGame: 1
   clockSound: {fileID: 653408859}
   reduceTime: 1
 --- !u!4 &982079662
@@ -8075,7 +8076,6 @@ MonoBehaviour:
   isAgenda: 0
   uiClick: {fileID: 982079665}
   txtDialog: Listening to music always helps me de-stress and relax between tasks.
-  taskToDo: {fileID: 946194126}
 --- !u!82 &991023548
 AudioSource:
   m_ObjectHideFlags: 0
