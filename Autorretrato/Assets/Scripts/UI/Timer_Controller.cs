@@ -8,20 +8,26 @@ public class Timer_Controller : MonoBehaviour
     public float tiempoRestante = 60f;
     public TextMeshProUGUI textoTiempo;
     float tiempoTotal;
-    bool flagEndGame = true;
+    [HideInInspector] public bool flagEndGame = true;
     public AudioSource clockSound;
     bool playClock = true;
+
+    UI_Controller uiController;
 
     private void Start()
     {
         tiempoTotal = tiempoRestante;
+        uiController = FindObjectOfType<UI_Controller>();
     }
     void Update()
     {
         if (tiempoRestante > 0)
         {
-            tiempoRestante -= Time.unscaledDeltaTime;
-            ActualizarUI();
+            if(!uiController.volumeScreen.activeInHierarchy)
+            {
+                tiempoRestante -= Time.unscaledDeltaTime;
+                ActualizarUI();
+            }
         }
         else
         {
@@ -61,7 +67,6 @@ public class Timer_Controller : MonoBehaviour
 
     void FinDelTiempo()
     {
-        Debug.Log("Tiempo terminado");
-        FindObjectOfType<UI_Controller>().showEndGameScreen();
+        uiController.showEndGameScreen();
     }
 }

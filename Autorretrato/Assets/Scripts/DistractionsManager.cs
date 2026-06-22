@@ -9,12 +9,7 @@ public class DistractionsManager : MonoBehaviour
     public bool isAgenda;
     public AudioSource uiClick;
     public string txtDialog;
-    Dialogs_Controller dialogsController;
-
-    private void Start()
-    {
-        dialogsController = FindObjectOfType<Dialogs_Controller>();
-    }
+    
     public void openTaskUI()
     {
         uiClick.Play();
@@ -30,7 +25,6 @@ public class DistractionsManager : MonoBehaviour
         HUD.SetActive(true);
         Time.timeScale = 1f;
         //subir energia
-        dialogsController.changeDialogTxt(txtDialog);
 
         //PuzzleManager checkTask = gameObject.GetComponent<PuzzleManager>();
         //if (checkTask != null)

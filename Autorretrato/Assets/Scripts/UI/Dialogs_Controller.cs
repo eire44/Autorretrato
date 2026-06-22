@@ -9,7 +9,7 @@ public class Dialogs_Controller : MonoBehaviour
     public TMP_Text dialogText;
     int dialogIndex = 0;
     public GameObject btnControlsOK;
-    // Start is called before the first frame update
+    
     void Start()
     {
         if(true) //persistir primer partida
@@ -22,12 +22,6 @@ public class Dialogs_Controller : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void changeDialogTxt(string newTxt)
     {
         if(btnControlsOK.activeInHierarchy)
@@ -36,12 +30,6 @@ public class Dialogs_Controller : MonoBehaviour
         }
         dialogText.text = newTxt;
     }
-
-    //public void nextDialog()
-    //{
-    //    dialogText.text = dialogs[dialogIndex];
-    //    dialogIndex++;
-    //}
 
     public void controlsUnderstood ()
     {

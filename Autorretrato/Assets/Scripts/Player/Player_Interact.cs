@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player_Interact : MonoBehaviour
 {
@@ -10,29 +11,23 @@ public class Player_Interact : MonoBehaviour
     GameObject currentInteractiveObject;
     GameObject currentDistractionObject;
     //public Color bubbleColor_Off;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if(onInteractiveArea)
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
+            if (EventSystem.current.IsPointerOverGameObject())
+                return;
+
+            if (onInteractiveArea)
             {
-                if(currentInteractiveObject != null)
+                if (currentInteractiveObject != null)
                 {
                     TaskManager taskMng = currentInteractiveObject.GetComponent<TaskManager>();
                     taskMng.openTaskUI();
                 }
             }
-        }
-        else if (onDistractionArea)
-        {
-            if (Input.GetMouseButtonDown(0))
+            else if (onDistractionArea)
             {
                 if (currentDistractionObject != null)
                 {
@@ -47,33 +42,46 @@ public class Player_Interact : MonoBehaviour
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Interactive Objects"))
         {
-            Transform bubble = collision.transform.Find("Bubble");
-            bubble.GetComponent<Renderer>().material.color = bubbleColor_On;
+            TaskManager tM = collision.gameObject.GetComponent<TaskManager>();
+            if (tM != null)
+            {
+                onArea(bubbleColor_On, collision.transform, tM.txtDialog);
+            }
+            
             onInteractiveArea = true;
             currentInteractiveObject = collision.gameObject;
         }
         else if(collision.gameObject.layer == LayerMask.NameToLayer("Distraction Objects"))
         {
-            Transform bubble = collision.transform.Find("Bubble");
-            bubble.GetComponent<Renderer>().material.color = bubbleColor_On;
+            DistractionsManager dM = collision.gameObject.GetComponent<DistractionsManager>();
+            if(dM != null)
+            {
+                onArea(bubbleColor_On, collision.transform, dM.txtDialog);
+            }
+            
             onDistractionArea = true;
             currentDistractionObject = collision.gameObject;
         }
+    }
+    
+    void onArea(Color color, Transform collision, string dialogText)
+    {
+        Transform bubble = collision.Find("Bubble");
+        bubble.GetComponent<Renderer>().material.color = color;
+        FindObjectOfType<Dialogs_Controller>().changeDialogTxt(dialogText);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Interactive Objects"))
         {
-            Transform bubble = collision.transform.Find("Bubble");
-            bubble.GetComponent<Renderer>().material.color = Color.white;
+            onArea(Color.white, collision.transform, "...");
             onInteractiveArea = false;
             currentInteractiveObject = null;
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Distraction Objects"))
         {
-            Transform bubble = collision.transform.Find("Bubble");
-            bubble.GetComponent<Renderer>().material.color = Color.white;
+            onArea(Color.white, collision.transform, "...");
             onDistractionArea = false;
             currentDistractionObject = null;
         }

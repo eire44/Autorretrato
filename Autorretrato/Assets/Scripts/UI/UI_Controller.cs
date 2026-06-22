@@ -18,17 +18,17 @@ public class UI_Controller : MonoBehaviour
     public void openVolumeManager()
     {
         audioSource_Click.Play();
+
+        volumeScreen.SetActive(!volumeScreen.activeInHierarchy);
+        HUD.SetActive(!HUD.activeInHierarchy);
+
         if (volumeScreen.activeInHierarchy)
         {
-            volumeScreen.SetActive(false);
-            HUD.SetActive(true);
-            Time.timeScale = 1f;
+            Time.timeScale = 0f;
         }
         else
         {
-            volumeScreen.SetActive(true);
-            HUD.SetActive(false);
-            Time.timeScale = 0f;
+            Time.timeScale = 1f;
         }
     }
 
@@ -48,6 +48,7 @@ public class UI_Controller : MonoBehaviour
 
     public void Jugar()
     {
+        Time.timeScale = 1f;
         audioSource_Click.Play();
         SceneManager.LoadScene("Room");
     }

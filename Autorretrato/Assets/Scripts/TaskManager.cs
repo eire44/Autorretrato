@@ -9,13 +9,7 @@ public class TaskManager : MonoBehaviour
     public bool isAgenda;
     public AudioSource uiClick;
     public string txtDialog;
-    Dialogs_Controller dialogsController;
-
-    private void Start()
-    {
-        dialogsController = FindObjectOfType<Dialogs_Controller>();
-    }
-
+    
     public void openTaskUI()
     {
         uiClick.Play();
@@ -38,21 +32,20 @@ public class TaskManager : MonoBehaviour
             if (checkTask.checkIfTaskCompleted(taskUI))
             {
                 endTask();
-                dialogsController.changeDialogTxt("...");
+                
                 if (isAgenda)
                 {
                     gm.activateTasks();
                 }
                 else
                 {
-                    gm.taskCompleted();
                     gm.reduceEnergy(true);
+                    gm.taskCompleted();
                 }
             }
             else
             {
-                dialogsController.changeDialogTxt(txtDialog);
-                gm.reduceEnergy(true);
+                gm.reduceEnergy(false);
             }
         }
     }

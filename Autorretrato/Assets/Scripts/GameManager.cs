@@ -33,9 +33,14 @@ public class GameManager : MonoBehaviour
         tasksLeft--;
         if(completeTasksIndex >= levels[levelIndex].tasksAmount) 
         {
-            winScreen.SetActive(true);
-            HUD.SetActive(false);
-            Time.timeScale = 0f;
+            if(!UI_Controller.endGameScreen.activeInHierarchy)
+            {
+                winScreen.SetActive(true);
+                HUD.SetActive(false);
+                FindObjectOfType<Timer_Controller>().textoTiempo.gameObject.SetActive(false);
+                Time.timeScale = 0f;
+            }
+            
         }
     }
 
