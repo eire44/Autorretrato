@@ -9,7 +9,7 @@ public class DistractionsManager : MonoBehaviour
     public bool isAgenda;
     public AudioSource uiClick;
     public string txtDialog;
-    
+
     public void openTaskUI()
     {
         uiClick.Play();
@@ -24,7 +24,6 @@ public class DistractionsManager : MonoBehaviour
         distractionUI.SetActive(false);
         HUD.SetActive(true);
         Time.timeScale = 1f;
-        //subir energia
 
         //PuzzleManager checkTask = gameObject.GetComponent<PuzzleManager>();
         //if (checkTask != null)

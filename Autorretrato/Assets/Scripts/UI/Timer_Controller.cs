@@ -11,6 +11,7 @@ public class Timer_Controller : MonoBehaviour
     [HideInInspector] public bool flagEndGame = true;
     public AudioSource clockSound;
     bool playClock = true;
+    public bool reduceTime = true;
 
     UI_Controller uiController;
 
@@ -24,6 +25,7 @@ public class Timer_Controller : MonoBehaviour
         if (tiempoRestante > 0)
         {
             if(!uiController.volumeScreen.activeInHierarchy)
+
             {
                 tiempoRestante -= Time.unscaledDeltaTime;
                 ActualizarUI();
@@ -67,6 +69,6 @@ public class Timer_Controller : MonoBehaviour
 
     void FinDelTiempo()
     {
-        uiController.showEndGameScreen();
+        uiController.showEndGameScreen("You ran out of time :(");
     }
 }

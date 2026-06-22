@@ -2,13 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UI_Controller : MonoBehaviour
 {
     public GameObject endGameScreen;
+    public GameObject winScreen;
     public GameObject HUD;
+    public GameObject clock;
     public GameObject volumeScreen;
     AudioSource audioSource_Click;
+    public Timer_Controller timeController;
+    public TMP_Text gameOverTxt;
+    public TMP_Text gameOverTxt_Shadow;
 
     private void Start()
     {
@@ -32,11 +38,28 @@ public class UI_Controller : MonoBehaviour
         }
     }
 
-    public void showEndGameScreen()
+    public void showWinningScreen()
     {
-        endGameScreen.SetActive(true);
-        HUD.SetActive(false);
-        Time.timeScale = 0f;
+        if(!endGameScreen.activeInHierarchy)
+        {
+            winScreen.SetActive(true);
+            HUD.SetActive(false);
+            clock.SetActive(false);
+            Time.timeScale = 0f;
+        }
+    }
+
+    public void showEndGameScreen(string txtGameOver)
+    {
+        if (!endGameScreen.activeInHierarchy && !winScreen.activeInHierarchy)
+        {
+            gameOverTxt.text = txtGameOver;
+            gameOverTxt_Shadow.text = txtGameOver;
+            endGameScreen.SetActive(true);
+            HUD.SetActive(false);
+            clock.SetActive(false);
+            Time.timeScale = 0f;
+        }
     }
 
     public void backToMainMenu()

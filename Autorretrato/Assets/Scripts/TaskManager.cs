@@ -32,7 +32,7 @@ public class TaskManager : MonoBehaviour
             if (checkTask.checkIfTaskCompleted(taskUI))
             {
                 endTask();
-                
+
                 if (isAgenda)
                 {
                     gm.activateTasks();
@@ -42,6 +42,7 @@ public class TaskManager : MonoBehaviour
                     gm.reduceEnergy(true);
                     gm.taskCompleted();
                 }
+                //dialogsController.changeDialogTxt("You did it!! One task less, " + gm.tasksLeft + " to go.");
             }
             else
             {

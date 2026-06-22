@@ -4,13 +4,14 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(DropZone))]
-public class turnTable_MusicController : MonoBehaviour
+public class turnTable_MusicController : Distractions_SpecificTasks
 {
     public TMP_Text txtSong;
     public AudioSource audioSource;
     DropZone dZ;
     bool playSong = true;
     bool addEnergy = true;
+    HashSet<string> musicPlayed = new HashSet<string>();
     private void Start()
     {
         dZ = GetComponent<DropZone>();
@@ -18,25 +19,33 @@ public class turnTable_MusicController : MonoBehaviour
 
     private void Update()
     {
-        if(dZ.draggablePlaced)
+        if (dZ.draggablePlaced)
         {
             turntable_playMusic song = dZ.draggedObject.GetComponent<turntable_playMusic>();
-            if(song != null)
+            txtSong.text = "Playing: " + song.songName;
+        }
+    }
+
+    public override void distractionTask()
+    {
+        if (dZ.draggablePlaced)
+        {
+            turntable_playMusic song = dZ.draggedObject.GetComponent<turntable_playMusic>();
+            if (song != null)
             {
-                txtSong.text = "Playing: " + song.songName;
-                if(addEnergy)
+                if (!musicPlayed.Contains(song.songName))
                 {
-                    addEnergy = false;
                     FindObjectOfType<GameManager>().AddEnergy();
                 }
-                
+
                 if (playSong)
                 {
                     playSong = false;
                     audioSource.PlayOneShot(song.clipToPlay);
+                    musicPlayed.Add(song.songName);
                 }
             }
-            
+
         }
         else
         {
