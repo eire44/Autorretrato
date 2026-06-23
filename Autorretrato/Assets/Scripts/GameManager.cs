@@ -7,30 +7,37 @@ public class GameManager : MonoBehaviour
 {
     int levelIndex = 0;
     int completeTasksIndex = 0;
-    public int tasksLeft = 0;
+    [HideInInspector] public int tasksLeft = 0;
     public GameObject HUD;
     public Image energyFiller;
-    public List<Levels_Controller> levels = new List<Levels_Controller>();
+    Agenda_Controller agenda;
     public Sprite[] avatarFeelings;
     public Image currentFeeling;
     public UI_Controller UI_Controller;
-    // Start is called before the first frame update
+
+    int tasksNumber = 3;
+    
     void Start()
     {
-        tasksLeft = levels[levelIndex].tasksAmount;
-    }
+        tasksLeft = tasksNumber;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        agenda = FindObjectOfType<Agenda_Controller>();
+
+        agenda.generateTasks(tasksNumber);
+
+        while (agenda.selectedTasks.Count < tasksNumber)
+        {
+            agenda.selectedTasks.Add(agenda.tasksList[Random.Range(0, agenda.tasksList.Count)]);
+        }
+
+        agenda.writeTasks();
     }
 
     public void taskCompleted()
     {
         completeTasksIndex++;
         tasksLeft--;
-        if(completeTasksIndex >= levels[levelIndex].tasksAmount) 
+        if(completeTasksIndex >= agenda.selectedTasks.Count) 
         {
             UI_Controller.showWinningScreen();
         }
@@ -38,8 +45,10 @@ public class GameManager : MonoBehaviour
 
     public void activateTasks()
     {
-        foreach (Task t in levels[levelIndex].tasks)
+        foreach (Task t in agenda.selectedTasks)
         {
+            /* cuando hayan mas tareas, en vez de habilitarlos con la layer y aparecer 
+             las bubbles, activar o desactivar todo el t.taskObject */
             Transform bubble = t.taskObject.transform.Find("Bubble");
             bubble.gameObject.SetActive(true);
             t.taskObject.layer = LayerMask.NameToLayer("Interactive Objects");
@@ -48,17 +57,7 @@ public class GameManager : MonoBehaviour
 
     public void reduceEnergy(bool taskCompleted)
     {
-        //float reductionPerTask = 1f / levels[levelIndex].tasksAmount;
-        //if (taskCompleted)
-        //{
-        //    //energyFiller.fillAmount = levels[levelIndex].tasksAmount / tasksLeft;}
-        //    energyFiller.fillAmount = reductionPerTask;
-        //}
-        //else
-        //{
-        //    energyFiller.fillAmount = reductionPerTask / 3; ;
-        //}
-        float amount = 1f / levels[levelIndex].tasksAmount;
+        float amount = 1f / agenda.selectedTasks.Count;
 
         if (!taskCompleted)
             amount /= 6f;
@@ -70,7 +69,7 @@ public class GameManager : MonoBehaviour
 
     public void AddEnergy()
     {
-        float amount = 1f / levels[levelIndex].tasksAmount;
+        float amount = 1f / agenda.selectedTasks.Count;
 
         energyFiller.fillAmount += amount;
 
