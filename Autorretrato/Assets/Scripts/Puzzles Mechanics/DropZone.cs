@@ -10,12 +10,13 @@ public class DropZone : MonoBehaviour, IDropHandler
     [HideInInspector] public bool draggablePlaced = false;
     [HideInInspector] public GameObject draggedObject;
     public AudioSource droppedAudio;
+    public bool changeScale = true;
     private void Start()
     {
         idOriginal = idCorrecto;
     }
 
-    public void OnDrop(PointerEventData eventData)
+    public virtual void OnDrop(PointerEventData eventData)
     {
         droppedAudio.Play();
         GameObject dropped = eventData.pointerDrag;
@@ -30,9 +31,12 @@ public class DropZone : MonoBehaviour, IDropHandler
 
             pieceRect.anchoredPosition = Vector2.zero;
 
-            pieceRect.sizeDelta = zoneRect.sizeDelta;
+            if(changeScale)
+            {
+                pieceRect.sizeDelta = zoneRect.sizeDelta;
 
-            pieceRect.localScale = Vector3.one;
+                pieceRect.localScale = Vector3.one;
+            }
 
             draggablePlaced = true;
             piece.zone = this;

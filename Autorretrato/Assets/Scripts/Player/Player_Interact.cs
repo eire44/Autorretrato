@@ -7,7 +7,7 @@ public class Player_Interact : MonoBehaviour
 {
     public Color bubbleColor_On;
     bool onInteractiveArea = false;
-    bool onDistractionArea = false;
+    [HideInInspector] public bool onDistractionArea = false;
     GameObject currentInteractiveObject;
     GameObject currentDistractionObject;
     //public Color bubbleColor_Off;

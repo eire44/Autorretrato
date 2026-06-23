@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public string id;
-    Image image;
+    [HideInInspector] public Image image;
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public DropZone zone;
     RectTransform rectTransform;
@@ -27,7 +27,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    public virtual void OnBeginDrag(PointerEventData eventData)
     {
         draggableAudio.Play();
         parentAfterDrag = transform.parent;
@@ -56,7 +56,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         transform.position = Input.mousePosition;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public virtual void OnEndDrag(PointerEventData eventData)
     {
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;

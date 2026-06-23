@@ -10,7 +10,6 @@ public class turnTable_MusicController : MonoBehaviour
     public AudioSource audioSource;
     DropZone dZ;
     bool playSong = true;
-    bool addEnergy = true;
     HashSet<string> musicPlayed = new HashSet<string>();
 
     string songPlaying = "No music playing";

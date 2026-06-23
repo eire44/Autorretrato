@@ -446,6 +446,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &15061161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,6 +818,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &57133566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,6 +912,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &60354514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1003,6 +1006,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &77887265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1094,6 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -1153,6 +1158,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &89495552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,6 +1226,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &113595131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1522,6 +1529,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155976128}
   m_CullTransparentMesh: 1
+--- !u!1 &170100049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 170100050}
+  - component: {fileID: 170100053}
+  - component: {fileID: 170100052}
+  - component: {fileID: 170100051}
+  m_Layer: 5
+  m_Name: Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &170100050
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170100049}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.34633064, y: 0.07865045, z: 0.302525}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2103473843}
+  m_Father: {fileID: 1366829725}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -26.23, y: -19.3}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &170100051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170100049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce11adc7f829ad49b8bf9a5d2b134b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  image: {fileID: 0}
+  parentAfterDrag: {fileID: 0}
+  zone: {fileID: 0}
+  draggablePlaced: 0
+  draggableAudio: {fileID: 54389410}
+--- !u!114 &170100052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170100049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c3ff7eea8fae8e1448d342e5a8e891d5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &170100053
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170100049}
+  m_CullTransparentMesh: 1
 --- !u!1 &195467615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: -1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -1842,6 +1945,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!1 &270561982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,6 +2001,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &270561985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2068,100 +2173,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273702329}
   m_CullTransparentMesh: 1
---- !u!1 &295736593
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 295736594}
-  - component: {fileID: 295736599}
-  - component: {fileID: 295736598}
-  - component: {fileID: 295736597}
-  m_Layer: 5
-  m_Name: Base
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &295736594
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295736593}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.34664613, y: 0.34664613, z: 0.34664613}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2103473843}
-  m_Father: {fileID: 1366829725}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26, y: -19.2}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &295736597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295736593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce11adc7f829ad49b8bf9a5d2b134b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  parentAfterDrag: {fileID: 0}
-  zone: {fileID: 0}
-  draggablePlaced: 0
-  draggableAudio: {fileID: 54389410}
---- !u!114 &295736598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295736593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0374a869af2bac8488412408900e9a91, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &295736599
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295736593}
-  m_CullTransparentMesh: 1
 --- !u!1 &315732953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,6 +2228,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &315732956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2310,6 +2322,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &344605174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2613,6 +2626,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &381580094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2740,6 +2754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -2799,6 +2814,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &394416853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4087,6 +4103,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!1 &569884995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,6 +4990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 10
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -5067,6 +5085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: -1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -5123,6 +5142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: -1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -5360,6 +5380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -5419,6 +5440,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &660620487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5642,6 +5664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 5
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -5701,6 +5724,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &728827943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6365,6 +6389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -6825,6 +6850,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &859473363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7167,6 +7193,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!1 &885045769
 GameObject:
   m_ObjectHideFlags: 0
@@ -7257,6 +7284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: -1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -7313,6 +7341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: -1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -7380,7 +7409,7 @@ GameObject:
   - component: {fileID: 906918983}
   - component: {fileID: 906918986}
   - component: {fileID: 906918985}
-  - component: {fileID: 906918984}
+  - component: {fileID: 906918987}
   m_Layer: 5
   m_Name: DropZone
   m_TagString: Untagged
@@ -7397,7 +7426,7 @@ RectTransform:
   m_GameObject: {fileID: 906918982}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3151662, y: 0.18801615, z: 1.6517882}
+  m_LocalScale: {x: 0.35528687, y: 0.2119506, z: 1.8620609}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2101898590}
@@ -7407,23 +7436,6 @@ RectTransform:
   m_AnchoredPosition: {x: -2.7, y: 44.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &906918984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906918982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda44d85577fb1f4c81e5667badedcae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idCorrecto: 3
-  idOriginal: 0
-  draggablePlaced: 0
-  draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 513242309}
 --- !u!114 &906918985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7462,6 +7474,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906918982}
   m_CullTransparentMesh: 1
+--- !u!114 &906918987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906918982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda44d85577fb1f4c81e5667badedcae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idCorrecto: 3
+  idOriginal: 0
+  draggablePlaced: 0
+  draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
+  changeScale: 0
 --- !u!1 &934915828
 GameObject:
   m_ObjectHideFlags: 0
@@ -7667,6 +7697,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &946194124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8632,6 +8663,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &992503275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8682,6 +8714,7 @@ GameObject:
   - component: {fileID: 1007306712}
   - component: {fileID: 1007306711}
   - component: {fileID: 1007306710}
+  - component: {fileID: 1007306713}
   m_Layer: 5
   m_Name: Encendedor
   m_TagString: Untagged
@@ -8698,7 +8731,7 @@ RectTransform:
   m_GameObject: {fileID: 1007306706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.111820504, y: 0.3354615, z: 2.7647505}
+  m_LocalScale: {x: 0.092053995, y: 0.27616197, z: 2.2760255}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1366829725}
@@ -8721,6 +8754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -8763,6 +8797,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007306706}
   m_CullTransparentMesh: 1
+--- !u!114 &1007306713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007306706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f3c6542ebd0e943bee2b0d8139f38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encendedorAbierto: {fileID: 1158327036}
 --- !u!1 &1012988991
 GameObject:
   m_ObjectHideFlags: 0
@@ -8954,6 +9001,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1024846142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9081,6 +9129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 6
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -9354,6 +9403,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1074136789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9556,6 +9606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 9
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -9649,6 +9700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 11
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -12415,6 +12467,7 @@ GameObject:
   - component: {fileID: 1158327042}
   - component: {fileID: 1158327041}
   - component: {fileID: 1158327040}
+  - component: {fileID: 1158327043}
   m_Layer: 5
   m_Name: EncendedorPrendido
   m_TagString: Untagged
@@ -12431,14 +12484,14 @@ RectTransform:
   m_GameObject: {fileID: 1158327036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.22229356, y: 0.564181, z: 3.6641238}
+  m_LocalScale: {x: 0.18299873, y: 0.46445078, z: 3.0164168}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1366829725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: 5}
+  m_AnchoredPosition: {x: 8.4343, y: 2.3661}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1158327040
@@ -12454,6 +12507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -12496,6 +12550,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158327036}
   m_CullTransparentMesh: 1
+--- !u!114 &1158327043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158327036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a698b8393bfdcf42bd9cd9805a763ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoke: {fileID: 1219566801}
 --- !u!1 &1159997457
 GameObject:
   m_ObjectHideFlags: 0
@@ -12548,6 +12615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: -1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -12779,6 +12847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -12838,6 +12907,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1216399100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12887,9 +12957,6 @@ GameObject:
   - component: {fileID: 1219566802}
   - component: {fileID: 1219566807}
   - component: {fileID: 1219566806}
-  - component: {fileID: 1219566805}
-  - component: {fileID: 1219566804}
-  - component: {fileID: 1219566803}
   m_Layer: 5
   m_Name: Humo
   m_TagString: Untagged
@@ -12916,52 +12983,6 @@ RectTransform:
   m_AnchoredPosition: {x: 12.621153, y: 68.791565}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1219566803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219566801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4063a2910bbc584b817bba3bdc7b814, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1219566804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219566801}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda44d85577fb1f4c81e5667badedcae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idCorrecto: -1
-  idOriginal: 0
-  draggablePlaced: 0
-  draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 513242309}
---- !u!114 &1219566805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219566801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce11adc7f829ad49b8bf9a5d2b134b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  parentAfterDrag: {fileID: 0}
-  zone: {fileID: 0}
-  draggablePlaced: 0
-  draggableAudio: {fileID: 54389410}
 --- !u!114 &1219566806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13219,6 +13240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 7
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -13652,6 +13674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -14024,7 +14047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1366829725
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14040,7 +14063,7 @@ RectTransform:
   - {fileID: 1129781979}
   - {fileID: 1007306707}
   - {fileID: 2101898590}
-  - {fileID: 295736594}
+  - {fileID: 170100050}
   - {fileID: 1158327037}
   - {fileID: 273702330}
   m_Father: {fileID: 489877062}
@@ -14311,6 +14334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -14370,6 +14394,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1391776790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14729,6 +14754,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1416809499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15046,6 +15072,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1440401965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15173,6 +15200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -15311,6 +15339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -15653,6 +15682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -15712,6 +15742,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1516631762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15735,6 +15766,7 @@ GameObject:
   - component: {fileID: 1539267914}
   - component: {fileID: 1539267916}
   - component: {fileID: 1539267917}
+  - component: {fileID: 1539267918}
   m_Layer: 7
   m_Name: Sahumerio Set
   m_TagString: Untagged
@@ -15820,6 +15852,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distractionScreen: {fileID: 1366829724}
   txtDialog: Lighting incense is always a good way to renew energies.
+--- !u!114 &1539267918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539267913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddd460d5b426204b996462642534a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  incense: {fileID: 2101898596}
+  smoke: {fileID: 1219566801}
+  Bubble: {fileID: 1299032746}
+  SahumerioSet: {fileID: 1539267913}
 --- !u!1 &1542387979
 GameObject:
   m_ObjectHideFlags: 0
@@ -16007,6 +16055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -16066,6 +16115,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1553324056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16133,6 +16183,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1570721510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16224,6 +16275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 6
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -16283,6 +16335,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1575694168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16384,6 +16437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -17301,6 +17355,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1646159658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17528,6 +17583,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1667144567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17621,6 +17677,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1713722634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18242,6 +18299,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1781435476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18381,6 +18439,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1803173950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18471,6 +18530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: -1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -18579,6 +18639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: -1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -18724,6 +18785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 5
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -18901,6 +18963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 8
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -19153,6 +19216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -19339,6 +19403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: -1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -19484,6 +19549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -19543,6 +19609,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &1944183231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19670,6 +19737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -20318,6 +20386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -20417,7 +20486,7 @@ GameObject:
   - component: {fileID: 2101898590}
   - component: {fileID: 2101898595}
   - component: {fileID: 2101898594}
-  - component: {fileID: 2101898593}
+  - component: {fileID: 2101898596}
   m_Layer: 5
   m_Name: Sahumerio
   m_TagString: Untagged
@@ -20446,23 +20515,6 @@ RectTransform:
   m_AnchoredPosition: {x: 29.9, y: -9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2101898593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101898589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce11adc7f829ad49b8bf9a5d2b134b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 1
-  parentAfterDrag: {fileID: 0}
-  zone: {fileID: 0}
-  draggablePlaced: 0
-  draggableAudio: {fileID: 54389410}
 --- !u!114 &2101898594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20501,6 +20553,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101898589}
   m_CullTransparentMesh: 1
+--- !u!114 &2101898596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101898589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4d4c5093beec04c8fe56d0ca60c1f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+  image: {fileID: 0}
+  parentAfterDrag: {fileID: 0}
+  zone: {fileID: 0}
+  draggablePlaced: 0
+  draggableAudio: {fileID: 54389410}
+  incenseSet: {fileID: 1366829725}
 --- !u!1 &2103473842
 GameObject:
   m_ObjectHideFlags: 0
@@ -20512,7 +20583,7 @@ GameObject:
   - component: {fileID: 2103473843}
   - component: {fileID: 2103473846}
   - component: {fileID: 2103473845}
-  - component: {fileID: 2103473844}
+  - component: {fileID: 2103473847}
   m_Layer: 5
   m_Name: DropZone
   m_TagString: Untagged
@@ -20529,33 +20600,16 @@ RectTransform:
   m_GameObject: {fileID: 2103473842}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15294719, y: 1.6099702, z: 19.819416}
+  m_LocalScale: {x: 0.1530865, y: 7.095825, z: 22.709936}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 295736594}
+  m_Father: {fileID: 170100050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.2, y: 63.3}
+  m_AnchoredPosition: {x: -0.1, y: 384}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2103473844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103473842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda44d85577fb1f4c81e5667badedcae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idCorrecto: 1
-  idOriginal: 0
-  draggablePlaced: 0
-  draggedObject: {fileID: 0}
-  droppedAudio: {fileID: 513242309}
 --- !u!114 &2103473845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20594,6 +20648,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103473842}
   m_CullTransparentMesh: 1
+--- !u!114 &2103473847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103473842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda44d85577fb1f4c81e5667badedcae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idCorrecto: 1
+  idOriginal: 0
+  draggablePlaced: 0
+  draggedObject: {fileID: 0}
+  droppedAudio: {fileID: 513242309}
+  changeScale: 0
 --- !u!1 &2113210213
 GameObject:
   m_ObjectHideFlags: 0
@@ -20683,6 +20755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -20740,6 +20813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
   zone: {fileID: 0}
   draggablePlaced: 0
@@ -20799,6 +20873,7 @@ MonoBehaviour:
   draggablePlaced: 0
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
+  changeScale: 1
 --- !u!114 &2131157927
 MonoBehaviour:
   m_ObjectHideFlags: 0
