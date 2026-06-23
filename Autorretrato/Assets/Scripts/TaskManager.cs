@@ -9,7 +9,13 @@ public class TaskManager : MonoBehaviour
     public bool isAgenda;
     public AudioSource uiClick;
     public string txtDialog;
-    
+    Dialogs_Controller dialogsController;
+
+    private void Start()
+    {
+        dialogsController = FindObjectOfType<Dialogs_Controller>(); 
+    }
+
     public void openTaskUI()
     {
         uiClick.Play();
@@ -42,7 +48,7 @@ public class TaskManager : MonoBehaviour
                     gm.reduceEnergy(true);
                     gm.taskCompleted();
                 }
-                //dialogsController.changeDialogTxt("You did it!! One task less, " + gm.tasksLeft + " to go.");
+                dialogsController.changeDialogTxt("You did it!! One task less, " + gm.tasksLeft + " to go.");
             }
             else
             {

@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(DropZone))]
-public class turnTable_MusicController : Distractions_SpecificTasks
+public class turnTable_MusicController : MonoBehaviour
 {
     public TMP_Text txtSong;
     public AudioSource audioSource;
@@ -27,9 +27,8 @@ public class turnTable_MusicController : Distractions_SpecificTasks
         distractionTask();
     }
 
-    public override void distractionTask()
+    public void distractionTask()
     {
-        Debug.Log("ENTRA");
         if (dZ.draggablePlaced)
         {
             turntable_playMusic song = dZ.draggedObject.GetComponent<turntable_playMusic>();

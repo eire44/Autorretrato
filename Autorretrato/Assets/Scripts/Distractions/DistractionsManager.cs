@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class DistractionsManager : MonoBehaviour
 {
-    public GameObject distractionUI;
+    [HideInInspector] public GameObject distractionUI;
     public GameObject HUD;
-    public bool isAgenda;
+    //public bool isAgenda;
     public AudioSource uiClick;
-    public string txtDialog;
 
-    public void openTaskUI()
+    public void openTaskUI(GameObject distractionScreen)
     {
+        distractionUI = distractionScreen;
         uiClick.Play();
         distractionUI.SetActive(true);
         HUD.SetActive(false);

@@ -58,6 +58,7 @@ public class UI_Controller : MonoBehaviour
             endGameScreen.SetActive(true);
             HUD.SetActive(false);
             clock.SetActive(false);
+            timeController.clockSound.Stop();
             Time.timeScale = 0f;
         }
     }

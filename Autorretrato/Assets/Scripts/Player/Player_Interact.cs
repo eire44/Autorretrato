@@ -31,7 +31,7 @@ public class Player_Interact : MonoBehaviour
             {
                 if (currentDistractionObject != null)
                 {
-                    DistractionsManager distractionMng = currentDistractionObject.GetComponent<DistractionsManager>();
+                    Distractions_UI distractionMng = currentDistractionObject.GetComponent<Distractions_UI>();
                     distractionMng.openTaskUI();
                 }
             }
@@ -53,10 +53,10 @@ public class Player_Interact : MonoBehaviour
         }
         else if(collision.gameObject.layer == LayerMask.NameToLayer("Distraction Objects"))
         {
-            DistractionsManager dM = collision.gameObject.GetComponent<DistractionsManager>();
-            if(dM != null)
+            Distractions_UI dUI = collision.gameObject.GetComponent<Distractions_UI>();
+            if(dUI != null)
             {
-                onArea(bubbleColor_On, collision.transform, dM.txtDialog);
+                onArea(bubbleColor_On, collision.transform, dUI.txtDialog);
             }
             
             onDistractionArea = true;
