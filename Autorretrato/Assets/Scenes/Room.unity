@@ -3736,7 +3736,7 @@ GameObject:
   - component: {fileID: 515337686}
   - component: {fileID: 515337687}
   - component: {fileID: 515337688}
-  - component: {fileID: 515337689}
+  - component: {fileID: 515337691}
   - component: {fileID: 515337690}
   m_Layer: 6
   m_Name: Agenda
@@ -3921,18 +3921,6 @@ MonoBehaviour:
   uiClick: {fileID: 982079665}
   txtDialog: "I always make a to-do list in the morning so I don\u2019t forget any
     tasks."
---- !u!114 &515337689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515337683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30efef4576a4fa24ab877fc37ddc55ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &515337690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3952,18 +3940,31 @@ MonoBehaviour:
     taskObject: {fileID: 1767984423}
   - taskName: Read a book
     taskObject: {fileID: 480429781}
+  tasksTxts: []
   taskTickets:
   - {fileID: 885045769}
   - {fileID: 421355859}
   - {fileID: 833392017}
   - {fileID: 1311419326}
   - {fileID: 1801529465}
-  tasksDropZones:
-  - {fileID: 870494236}
-  - {fileID: 531719965}
-  - {fileID: 268669343}
-  - {fileID: 1519153064}
-  - {fileID: 1694135295}
+  dropZones:
+  - {fileID: 870494240}
+  - {fileID: 531719969}
+  - {fileID: 268669347}
+  - {fileID: 1519153066}
+  - {fileID: 1694135297}
+--- !u!114 &515337691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515337683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0b48325494cac4a8118393b02781f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519146187
 GameObject:
   m_ObjectHideFlags: 0
@@ -16476,7 +16477,7 @@ MonoBehaviour:
   smoke: {fileID: 1219566801}
   Bubble: {fileID: 1299032746}
   SahumerioSet: {fileID: 1539267913}
-  player_Interact: {fileID: 0}
+  player_Interact: {fileID: 627544279}
 --- !u!1 &1542387979
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ public class Incense_Puzzle_Controller : MonoBehaviour
             incense.enabled = false;
             Bubble.SetActive(false);
             player_Interact.onDistractionArea = false;
+            FindObjectOfType<GameManager>().AddEnergy();
             SahumerioSet.layer = LayerMask.NameToLayer("Default");
         }
     }

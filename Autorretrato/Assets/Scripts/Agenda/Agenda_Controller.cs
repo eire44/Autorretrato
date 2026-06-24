@@ -9,9 +9,9 @@ public class Agenda_Controller : MonoBehaviour
     
     public HashSet<Task> selectedTasks = new HashSet<Task>();
 
-    TMP_Text[] tasksTxts;
+    [HideInInspector] public TMP_Text[] tasksTxts;
     public GameObject[] taskTickets;
-    public GameObject[] tasksDropZones;
+    public DropZone[] dropZones;
     int taskIndex = 0;
 
     public void generateTasks(int tasksAmount)
@@ -21,9 +21,8 @@ public class Agenda_Controller : MonoBehaviour
         for (int i = 0; i < tasksAmount; i++)
         {
             taskTickets[i].SetActive(true);
-            tasksDropZones[i].SetActive(true);
+            dropZones[i].gameObject.SetActive(true);
             tasksTxts[i] = taskTickets[i].transform.Find("txt").GetComponent<TMP_Text>();
-            Debug.Log(tasksTxts[i].name);
         }
     }
     
