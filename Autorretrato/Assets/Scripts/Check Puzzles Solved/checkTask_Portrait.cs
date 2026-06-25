@@ -5,7 +5,6 @@ using UnityEngine;
 public class checkTask_Portrait : PuzzleManager
 {
     public GameObject taskScreen;
-    //[HideInInspector] public bool puzzleSolved = false;
     bool playAudioOnce = false;
 
     private void Update()
@@ -20,12 +19,14 @@ public class checkTask_Portrait : PuzzleManager
                 {
                     taskDone.Play();
                     playAudioOnce = true;
+                    feedbackBubble.SetActive(true);
                 }
             }
             else
             {
                 puzzleSolved = false;
                 playAudioOnce = false;
+                feedbackBubble.SetActive(false);
             }
         }
     }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour
 {
     public AudioSource taskDone;
-    [HideInInspector]
-    public virtual bool puzzleSolved { get; set; } = false;
+    public GameObject feedbackBubble;
+    [HideInInspector] public virtual bool puzzleSolved { get; set; } = false;
 
     public virtual bool checkIfTaskCompleted(GameObject taskUI)
     {

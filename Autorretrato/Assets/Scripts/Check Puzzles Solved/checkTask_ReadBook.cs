@@ -6,7 +6,6 @@ public class checkTask_ReadBook : PuzzleManager
 {
     int orderId = 0;
     public GameObject taskScreen;
-    //[HideInInspector] public override bool puzzleSolved = false;
     bool playAudioOnce = false;
 
     private void Update()
@@ -20,17 +19,19 @@ public class checkTask_ReadBook : PuzzleManager
                 if (!playAudioOnce)
                 {
                     taskDone.Play();
+                    feedbackBubble.SetActive(true);
                     playAudioOnce = true;
                 }
             } else
             {
                 puzzleSolved = false;
                 playAudioOnce = false;
+                feedbackBubble.SetActive(false);
             }
         }
     }
 
-    public override bool checkIfTaskCompleted(GameObject taskUI) //podrían ser llamados en updates mientras la screen esté activa
+    public override bool checkIfTaskCompleted(GameObject taskUI)
     {
         foreach (Transform UIitem in taskUI.transform)
         {

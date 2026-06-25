@@ -7,7 +7,6 @@ using UnityEngine.XR;
 public class check_AgendaFilled : PuzzleManager
 {
     public GameObject taskScreen;
-    //[HideInInspector] public bool puzzleSolved = false;
     bool playAudioOnce = false;
 
     private void Update()
@@ -22,12 +21,14 @@ public class check_AgendaFilled : PuzzleManager
                 {
                     taskDone.Play();
                     playAudioOnce = true;
+                    feedbackBubble.SetActive(true);
                 }
             }
             else
             {
                 puzzleSolved = false;
                 playAudioOnce = false;
+                feedbackBubble.SetActive(false);
             }
         }
     }

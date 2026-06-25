@@ -32,10 +32,11 @@ public class TaskManager : MonoBehaviour
         Time.timeScale = 1f;
         //bajar energia
         PuzzleManager checkTask = gameObject.GetComponent<PuzzleManager>();
+        checkTask.feedbackBubble.SetActive(false);
         GameManager gm = FindObjectOfType<GameManager>();
         if (checkTask != null)
         {
-            if (checkTask.puzzleSolved) //podria cambiar la verificacion a los puzzleManager y devolver un bool
+            if (checkTask.puzzleSolved)
             {
                 endTask();
 

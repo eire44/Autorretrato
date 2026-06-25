@@ -8,7 +8,6 @@ public class checkTaskCloset : PuzzleManager
     public dzGroupsList dzGroupsList;
     public GameObject clothes;
     public GameObject taskScreen;
-    //[HideInInspector] public bool puzzleSolved = false;
     bool playAudioOnce = false;
 
     private void Update()
@@ -22,6 +21,7 @@ public class checkTaskCloset : PuzzleManager
                 if (!playAudioOnce)
                 {
                     taskDone.Play();
+                    feedbackBubble.SetActive(true);
                     playAudioOnce = true;
                 }
             }
@@ -29,6 +29,7 @@ public class checkTaskCloset : PuzzleManager
             {
                 puzzleSolved = false;
                 playAudioOnce = false;
+                feedbackBubble.SetActive(false);
             }
         }
     }
