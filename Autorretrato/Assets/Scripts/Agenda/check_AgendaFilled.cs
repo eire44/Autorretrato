@@ -6,6 +6,32 @@ using UnityEngine.XR;
 [RequireComponent(typeof(Agenda_Controller))]
 public class check_AgendaFilled : PuzzleManager
 {
+    public GameObject taskScreen;
+    //[HideInInspector] public bool puzzleSolved = false;
+    bool playAudioOnce = false;
+
+    private void Update()
+    {
+        if (taskScreen.activeInHierarchy)
+        {
+            if (checkIfTaskCompleted(taskScreen))
+            {
+                puzzleSolved = true;
+
+                if (!playAudioOnce)
+                {
+                    taskDone.Play();
+                    playAudioOnce = true;
+                }
+            }
+            else
+            {
+                puzzleSolved = false;
+                playAudioOnce = false;
+            }
+        }
+    }
+
     public override bool checkIfTaskCompleted(GameObject taskUI)
     {
         Agenda_Controller agenda_Controller = GetComponent<Agenda_Controller>();

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
+    public AudioSource taskDone;
+    [HideInInspector]
+    public virtual bool puzzleSolved { get; set; } = false;
+
     public virtual bool checkIfTaskCompleted(GameObject taskUI)
     {
         foreach (Transform UIitem in taskUI.transform)

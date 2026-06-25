@@ -7,6 +7,32 @@ public class checkTaskCloset : PuzzleManager
 {
     public dzGroupsList dzGroupsList;
     public GameObject clothes;
+    public GameObject taskScreen;
+    //[HideInInspector] public bool puzzleSolved = false;
+    bool playAudioOnce = false;
+
+    private void Update()
+    {
+        if (taskScreen.activeInHierarchy)
+        {
+            if (checkIfTaskCompleted(taskScreen))
+            {
+                puzzleSolved = true;
+
+                if (!playAudioOnce)
+                {
+                    taskDone.Play();
+                    playAudioOnce = true;
+                }
+            }
+            else
+            {
+                puzzleSolved = false;
+                playAudioOnce = false;
+            }
+        }
+    }
+
     public override bool checkIfTaskCompleted(GameObject taskUI)
     {
         foreach (DropZoneGroups dzG in dzGroupsList.dzGroups)

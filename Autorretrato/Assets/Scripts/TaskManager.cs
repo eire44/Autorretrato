@@ -35,7 +35,7 @@ public class TaskManager : MonoBehaviour
         GameManager gm = FindObjectOfType<GameManager>();
         if (checkTask != null)
         {
-            if (checkTask.checkIfTaskCompleted(taskUI))
+            if (checkTask.puzzleSolved) //podria cambiar la verificacion a los puzzleManager y devolver un bool
             {
                 endTask();
 
