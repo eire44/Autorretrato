@@ -10,6 +10,7 @@ public class Incense_Puzzle_Controller : MonoBehaviour
     public GameObject Bubble;
     public GameObject SahumerioSet;
     public Player_Interact player_Interact;
+    public List<DropZone> dropZones = new List<DropZone>();
 
     void Update()
     {
@@ -29,6 +30,10 @@ public class Incense_Puzzle_Controller : MonoBehaviour
             player_Interact.onDistractionArea = false;
             FindObjectOfType<GameManager>().AddEnergy();
             SahumerioSet.layer = LayerMask.NameToLayer("Default");
+            foreach (DropZone dz in dropZones)
+            {
+                dz.gameObject.SetActive(false);
+            }
         }
     }
 }

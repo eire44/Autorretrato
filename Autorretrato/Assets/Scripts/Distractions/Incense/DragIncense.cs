@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class DragIncense : DraggableObject
 {
     public Transform incenseSet;
+    public DropZone incenseBase;
     public override void OnBeginDrag(PointerEventData eventData)
     {
         draggableAudio.Play();
@@ -30,6 +31,15 @@ public class DragIncense : DraggableObject
     }
     public override void OnEndDrag(PointerEventData eventData)
     {
+        if (incenseBase.draggablePlaced)
+        {
+            transform.SetParent(incenseBase.transform.parent);
+        }
+        else
+        {
+            transform.SetParent(incenseSet);
+        }
+
         image.raycastTarget = true;
 
         foreach (var graphic in GetComponentsInChildren<UnityEngine.UI.Graphic>())
