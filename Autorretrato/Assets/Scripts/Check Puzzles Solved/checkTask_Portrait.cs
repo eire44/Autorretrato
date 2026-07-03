@@ -17,16 +17,18 @@ public class checkTask_Portrait : PuzzleManager
 
                 if (!playAudioOnce)
                 {
-                    taskDone.Play();
-                    playAudioOnce = true;
-                    feedbackBubble.SetActive(true);
+                    //taskDone.Play();
+                    //playAudioOnce = true;
+                    //feedbackBubble.SetActive(true);
+                    activateFeedback(true, playAudioOnce, feedbackBubble);
                 }
             }
             else
             {
                 puzzleSolved = false;
-                playAudioOnce = false;
-                feedbackBubble.SetActive(false);
+                activateFeedback(false, playAudioOnce, feedbackBubble);
+                //playAudioOnce = false;
+                //feedbackBubble.SetActive(false);
             }
         }
     }

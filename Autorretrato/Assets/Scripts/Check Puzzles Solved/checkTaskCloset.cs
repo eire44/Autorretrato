@@ -20,16 +20,18 @@ public class checkTaskCloset : PuzzleManager
 
                 if (!playAudioOnce)
                 {
-                    taskDone.Play();
-                    feedbackBubble.SetActive(true);
-                    playAudioOnce = true;
+                    //taskDone.Play();
+                    //feedbackBubble.SetActive(true);
+                    //playAudioOnce = true;
+                    activateFeedback(true, playAudioOnce, feedbackBubble);
                 }
             }
             else
             {
                 puzzleSolved = false;
-                playAudioOnce = false;
-                feedbackBubble.SetActive(false);
+                //playAudioOnce = false;
+                //feedbackBubble.SetActive(false);
+                activateFeedback(false, playAudioOnce, feedbackBubble);
             }
         }
     }

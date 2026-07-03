@@ -8,6 +8,7 @@ public class Distractions_UI : MonoBehaviour
     public string txtDialog;
     DistractionsManager distractionsManager;
 
+
     private void Start()
     {
         distractionsManager = FindObjectOfType<DistractionsManager>();

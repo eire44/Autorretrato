@@ -34,6 +34,7 @@ public class Incense_Puzzle_Controller : MonoBehaviour
             {
                 dz.gameObject.SetActive(false);
             }
+            FindObjectOfType<DistractionsManager>().activateFeedback(true);
         }
     }
 }

@@ -36,6 +36,7 @@ public class turnTable_MusicController : MonoBehaviour
                 if (!musicPlayed.Contains(song.songName))
                 {
                     FindObjectOfType<GameManager>().AddEnergy();
+                    FindObjectOfType<DistractionsManager>().activateFeedback(true);
                 }
 
                 if (playSong)
@@ -53,6 +54,7 @@ public class turnTable_MusicController : MonoBehaviour
         {
             txtSong.text = "No music playing";
             audioSource.Stop();
+            FindObjectOfType<DistractionsManager>().activateFeedback(false);
             playSong = true;
         }
     }

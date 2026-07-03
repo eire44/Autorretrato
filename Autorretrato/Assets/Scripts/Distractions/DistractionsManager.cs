@@ -8,6 +8,8 @@ public class DistractionsManager : MonoBehaviour
     public GameObject HUD;
     //public bool isAgenda;
     public AudioSource uiClick;
+    public AudioSource distractionFeedback;
+    public GameObject bubbleFeedback;
 
     public void openTaskUI(GameObject distractionScreen)
     {
@@ -18,11 +20,21 @@ public class DistractionsManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void activateFeedback(bool puzzleComplete)
+    {
+        if (puzzleComplete)
+        {
+            distractionFeedback.Play();
+        }
+        bubbleFeedback.SetActive(puzzleComplete);
+    }
+
     public void closeTaskUI()
     {
         uiClick.Play();
         distractionUI.SetActive(false);
         HUD.SetActive(true);
+        bubbleFeedback.SetActive(false);
         Time.timeScale = 1f;
 
         //PuzzleManager checkTask = gameObject.GetComponent<PuzzleManager>();
