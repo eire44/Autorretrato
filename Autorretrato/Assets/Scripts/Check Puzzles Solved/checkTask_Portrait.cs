@@ -13,22 +13,16 @@ public class checkTask_Portrait : PuzzleManager
         {
             if (checkIfTaskCompleted(taskScreen))
             {
-                puzzleSolved = true;
-
                 if (!playAudioOnce)
                 {
-                    //taskDone.Play();
-                    //playAudioOnce = true;
-                    //feedbackBubble.SetActive(true);
-                    activateFeedback(true, playAudioOnce, feedbackBubble);
+                    playAudioOnce = true;
+                    activateFeedback(true, feedbackBubble);
                 }
             }
             else
             {
-                puzzleSolved = false;
-                activateFeedback(false, playAudioOnce, feedbackBubble);
-                //playAudioOnce = false;
-                //feedbackBubble.SetActive(false);
+                playAudioOnce = false;
+                activateFeedback(false, feedbackBubble);
             }
         }
     }

@@ -25,13 +25,13 @@ public class PuzzleManager : MonoBehaviour
         return true;
     }
 
-    public void activateFeedback(bool puzzleComplete, bool playAudioOnce, GameObject feedbackBubble)
+    public void activateFeedback(bool puzzleComplete, GameObject feedbackBubble)
     {
-        if(puzzleComplete)
+        if (puzzleComplete)
         {
             taskDone.Play();
         }
-        playAudioOnce = puzzleComplete;
+
         feedbackBubble.SetActive(puzzleComplete);
     }
 }

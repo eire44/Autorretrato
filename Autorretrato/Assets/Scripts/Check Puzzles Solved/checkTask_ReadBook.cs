@@ -14,21 +14,15 @@ public class checkTask_ReadBook : PuzzleManager
         {
             if(checkIfTaskCompleted(taskScreen))
             {
-                puzzleSolved = true;
-
                 if (!playAudioOnce)
                 {
-                    //taskDone.Play();
-                    //feedbackBubble.SetActive(true);
-                    //playAudioOnce = true;
-                    activateFeedback(true, playAudioOnce, feedbackBubble);
+                    playAudioOnce = true;
+                    activateFeedback(true, feedbackBubble);
                 }
             } else
             {
-                puzzleSolved = false;
-                //playAudioOnce = false;
-                //feedbackBubble.SetActive(false);
-                activateFeedback(false, playAudioOnce, feedbackBubble);
+                playAudioOnce = false;
+                activateFeedback(false, feedbackBubble);
             }
         }
     }

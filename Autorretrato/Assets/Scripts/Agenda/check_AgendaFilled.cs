@@ -15,22 +15,16 @@ public class check_AgendaFilled : PuzzleManager
         {
             if (checkIfTaskCompleted(taskScreen))
             {
-                puzzleSolved = true;
-
                 if (!playAudioOnce)
                 {
-                    //taskDone.Play();
-                    //playAudioOnce = true;
-                    //feedbackBubble.SetActive(true);
-                    activateFeedback(true, playAudioOnce, feedbackBubble);
+                    playAudioOnce = true;
+                    activateFeedback(true, feedbackBubble);
                 }
             }
             else
             {
-                puzzleSolved = false;
-                //playAudioOnce = false;
-                //feedbackBubble.SetActive(false);
-                activateFeedback(false, playAudioOnce, feedbackBubble);
+                playAudioOnce = false;
+                activateFeedback(false, feedbackBubble);
             }
         }
     }

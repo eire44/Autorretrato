@@ -15,6 +15,8 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     Vector3 originalScale;
     [HideInInspector] public bool draggablePlaced = false;
     public AudioSource draggableAudio;
+    [HideInInspector] public bool dragging = false;
+    [HideInInspector] public GameObject target;
 
     void Awake()
     {
@@ -29,6 +31,7 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public virtual void OnBeginDrag(PointerEventData eventData)
     {
+        dragging = true;
         draggableAudio.Play();
         parentAfterDrag = transform.parent;
         //transform.SetParent(transform.root);
@@ -58,6 +61,9 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public virtual void OnEndDrag(PointerEventData eventData)
     {
+        dragging = false;
+        target = eventData.pointerCurrentRaycast.gameObject;
+
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
 
