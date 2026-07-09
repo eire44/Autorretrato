@@ -633,7 +633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &34196470
 RectTransform:
   m_ObjectHideFlags: 0
@@ -652,11 +652,7 @@ RectTransform:
   - {fileID: 1050721775}
   - {fileID: 2106726731}
   - {fileID: 546110507}
-  - {fileID: 2109519419}
-  - {fileID: 1024193353}
   - {fileID: 1508846070}
-  - {fileID: 423768506}
-  - {fileID: 1129841362}
   - {fileID: 1251646585}
   - {fileID: 1588260870}
   m_Father: {fileID: 489877062}
@@ -1763,7 +1759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &122909975
 Transform:
   m_ObjectHideFlags: 0
@@ -4029,7 +4025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &423768506
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4037,16 +4033,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423768505}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 34196470}
+  m_Father: {fileID: 546110507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: -1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423768507
@@ -5450,6 +5446,7 @@ GameObject:
   - component: {fileID: 546110507}
   - component: {fileID: 546110509}
   - component: {fileID: 546110508}
+  - component: {fileID: 546110510}
   m_Layer: 5
   m_Name: answerCheck1
   m_TagString: Untagged
@@ -5468,7 +5465,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2109519419}
+  - {fileID: 423768506}
   m_Father: {fileID: 34196470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5514,6 +5513,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546110506}
   m_CullTransparentMesh: 1
+--- !u!114 &546110510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546110506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbfe52154431cc4195af8996710ad18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkAnswer: 0
+  correctAnswer: 0
+  greenCheck: {fileID: 423768505}
 --- !u!1 &548628844
 GameObject:
   m_ObjectHideFlags: 0
@@ -11974,16 +11988,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024193352}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 34196470}
+  m_Father: {fileID: 1508846070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -129, y: -120}
+  m_AnchoredPosition: {x: 166, y: -2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024193354
@@ -15592,7 +15606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1129841362
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15600,16 +15614,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129841361}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 34196470}
+  m_Father: {fileID: 1508846070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: -116.7}
+  m_AnchoredPosition: {x: 0, y: 1.300003}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129841363
@@ -15747,7 +15761,8 @@ GameObject:
   - component: {fileID: 1145277262}
   - component: {fileID: 1145277263}
   - component: {fileID: 1145277264}
-  m_Layer: 6
+  - component: {fileID: 1145277265}
+  m_Layer: 0
   m_Name: PC1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15930,6 +15945,45 @@ MonoBehaviour:
   uiClick: {fileID: 982079665}
   txtDialog: I have a Green Cross exam due today. This one is about values and good
     behaviour. Let's do it!
+--- !u!114 &1145277265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145277259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6470e7486852c645800f5afe33e6242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskDone: {fileID: 250021058}
+  feedbackBubble: {fileID: 2061737958}
+  questions:
+  - questionText: 1. Which of these is a core value of the Green Cross?
+    answers:
+    - answer: Discrimination
+      correctAnswer: 0
+    - answer: Empathy
+      correctAnswer: 1
+  - questionText: 2. If you find a beggar on the street, what do you do?
+    answers:
+    - answer: Ask them how you can help them
+      correctAnswer: 1
+    - answer: Ignore them and keep walking.
+      correctAnswer: 0
+  - questionText: 3. What would you do if you witness a traffic incident?
+    answers:
+    - answer: Call 911 and check if anyone is injured.
+      correctAnswer: 1
+    - answer: Take a video for social media.
+      correctAnswer: 0
+  txtQuestion: {fileID: 2106726732}
+  txtAnswer1: {fileID: 2109519420}
+  txtAnswer2: {fileID: 1024193354}
+  options:
+  - {fileID: 546110510}
+  - {fileID: 1508846073}
 --- !u!1 &1146171353
 GameObject:
   m_ObjectHideFlags: 0
@@ -17296,9 +17350,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1581981985}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
-        m_MethodName: closeTaskUI
+      - m_Target: {fileID: 1145277265}
+        m_TargetAssemblyTypeName: Forms_Controller, Assembly-CSharp
+        m_MethodName: submitAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20165,6 +20219,7 @@ GameObject:
   - component: {fileID: 1508846070}
   - component: {fileID: 1508846072}
   - component: {fileID: 1508846071}
+  - component: {fileID: 1508846073}
   m_Layer: 5
   m_Name: answerCheck2
   m_TagString: Untagged
@@ -20183,7 +20238,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1024193353}
+  - {fileID: 1129841362}
   m_Father: {fileID: 34196470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -20229,6 +20286,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508846069}
   m_CullTransparentMesh: 1
+--- !u!114 &1508846073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508846069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbfe52154431cc4195af8996710ad18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkAnswer: 0
+  correctAnswer: 0
+  greenCheck: {fileID: 1129841361}
 --- !u!1 &1516631756
 GameObject:
   m_ObjectHideFlags: 0
@@ -21471,7 +21543,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1581981985}
+      - m_Target: {fileID: 1145277264}
         m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
         m_MethodName: closeTaskUI
         m_Mode: 1
@@ -27213,16 +27285,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109519418}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 34196470}
+  m_Father: {fileID: 546110507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -129, y: -0}
+  m_AnchoredPosition: {x: 166, y: 1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2109519420

@@ -5,8 +5,7 @@ using TMPro;
 
 public class Forms_Controller : PuzzleManager
 {
-    public List<string> questions = new List<string>();
-    public List<answers[]> answers = new List<answers[]>();
+    public List<questions> questions = new List<questions>();
 
     int questionIndex = 0;
 
@@ -24,6 +23,7 @@ public class Forms_Controller : PuzzleManager
 
     public void submitAnswer()
     {
+        //sonidos bien o mal
         if (checkAnswer())
         {
             correctAnswer();
@@ -76,12 +76,12 @@ public class Forms_Controller : PuzzleManager
 
     void changeQuestion()
     {
-        txtQuestion.text = questions[questionIndex];
-        txtAnswer1.text = answers[questionIndex][0].answer;
-        txtAnswer2.text = answers[questionIndex][1].answer;
+        txtQuestion.text = questions[questionIndex].questionText;
+        txtAnswer1.text = questions[questionIndex].answers[0].answer;
+        txtAnswer2.text = questions[questionIndex].answers[1].answer;
 
-        options[0].correctAnswer = answers[questionIndex][0].correctAnswer;
-        options[1].correctAnswer = answers[questionIndex][1].correctAnswer;
+        options[0].correctAnswer = questions[questionIndex].answers[0].correctAnswer;
+        options[1].correctAnswer = questions[questionIndex].answers[1].correctAnswer;
 
         questionIndex++;
     }

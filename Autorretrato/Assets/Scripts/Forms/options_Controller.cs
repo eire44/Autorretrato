@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class options_Controller : MonoBehaviour
+public class options_Controller : MonoBehaviour, IPointerClickHandler
 {
     [HideInInspector] public bool checkAnswer = false;
     public bool correctAnswer = false;
@@ -15,6 +15,7 @@ public class options_Controller : MonoBehaviour
 
         if(checkAnswer)
         {
+            //sonido check
             greenCheck.SetActive(true);
         }
         else
