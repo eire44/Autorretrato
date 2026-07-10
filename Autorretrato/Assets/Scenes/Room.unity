@@ -23895,6 +23895,16 @@ MonoBehaviour:
       correctOption: 1
     - image: {fileID: -2084454330, guid: 122907160b523474aa893dec685aa5dc, type: 3}
       correctOption: 0
+  - word: Tavolo
+    vocabularyList:
+    - image: {fileID: 210539706, guid: 122907160b523474aa893dec685aa5dc, type: 3}
+      correctOption: 0
+    - image: {fileID: 649533457, guid: 122907160b523474aa893dec685aa5dc, type: 3}
+      correctOption: 1
+    - image: {fileID: 165869552, guid: 122907160b523474aa893dec685aa5dc, type: 3}
+      correctOption: 0
+    - image: {fileID: 1641615449, guid: 122907160b523474aa893dec685aa5dc, type: 3}
+      correctOption: 0
   imgOptions:
   - {fileID: 941690330}
   - {fileID: 303475682}
