@@ -25,7 +25,8 @@ public class Ball_Movement : MonoBehaviour
         if (!ball_Controller.puzzleSolved)
         {
             Vector2 direction = new Vector2(x, y);
-            rectTransform.anchoredPosition += direction * speed * Time.deltaTime;
+            rectTransform.anchoredPosition += direction * speed * Time.unscaledDeltaTime;
         }
+
     }
 }
