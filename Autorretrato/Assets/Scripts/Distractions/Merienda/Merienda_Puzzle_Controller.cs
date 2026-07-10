@@ -34,7 +34,6 @@ public class Merienda_Puzzle_Controller : MonoBehaviour
         {
             if(checkIfMeriendaSet())
             {
-                Debug.Log("done");
                 puzzleSolved = true;
                 Bubble.SetActive(false);
                 player_Interact.onDistractionArea = false;
