@@ -2927,7 +2927,7 @@ GameObject:
   - component: {fileID: 195155837}
   - component: {fileID: 195155836}
   - component: {fileID: 195155840}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PC Game Programming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2966,8 +2966,8 @@ MonoBehaviour:
   HUD: {fileID: 1424624726}
   isAgenda: 0
   uiClick: {fileID: 982079665}
-  txtDialog: I have to present project updates today. Help me set up the scene in
-    Unity.
+  txtDialog: This code is missing some values. Let's fix it so the ball can get to
+    its hole.
 --- !u!61 &195155837
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21802,7 +21802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1281549090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21827,8 +21827,8 @@ RectTransform:
   - {fileID: 140270089}
   - {fileID: 1879134750}
   - {fileID: 985957274}
-  - {fileID: 397143687}
   - {fileID: 6742850}
+  - {fileID: 397143687}
   m_Father: {fileID: 489877062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -23819,7 +23819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1424624727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25709,7 +25709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1558794951
 Transform:
   m_ObjectHideFlags: 0

@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Numerics;
 using TMPro;
+using UnityEngine;
 
 public class Game_Programming_Conttroller : PuzzleManager
 {
@@ -14,15 +15,6 @@ public class Game_Programming_Conttroller : PuzzleManager
     public DropZone dzY;
     bool playAudioOnce = false;
     
-    public void puzzleStatus(bool complete)
-    {
-        if (!playAudioOnce)
-        {
-            playAudioOnce = complete;
-            activateFeedback(complete, feedbackBubble);
-        }
-    }
-
     public bool checkIfValuesAssigned()
     {
         int placedAmount = 0;
@@ -57,11 +49,16 @@ public class Game_Programming_Conttroller : PuzzleManager
     {
         if(ball_Movement.x == 1 && ball_Movement.y == 0)
         {
-            puzzleStatus(true);
+            if (!playAudioOnce)
+            {
+                playAudioOnce = true;
+                activateFeedback(true, feedbackBubble);
+            }
         }
         else
         {
-            puzzleStatus(false);
+            playAudioOnce = false;
+            activateFeedback(false, feedbackBubble);
         }
     }
 }
