@@ -13,14 +13,8 @@ public class Agenda_Controller : MonoBehaviour
     public GameObject[] taskTickets;
     public DropZone[] dropZones;
     int taskIndex = 0;
-    Level_Manager level_Manager;
 
-    private void Start()
-    {
-        level_Manager = FindObjectOfType<Level_Manager>();
-    }
-
-    public void generateTasks(int tasksAmount)
+    public void generateTasks(int tasksAmount, int dropZonesAmount)
     {
         //tasksTxts = new TMP_Text[tasksAmount];
 
@@ -31,13 +25,18 @@ public class Agenda_Controller : MonoBehaviour
         //    tasksTxts[i] = taskTickets[i].transform.Find("txt").GetComponent<TMP_Text>();
         //}
 
-        tasksTxts = new TMP_Text[level_Manager.levels[Level_Manager.levelIndex].tasks.Count];
+        tasksTxts = new TMP_Text[tasksAmount];
 
-        for (int i = 0; i < level_Manager.levels[Level_Manager.levelIndex].tasks.Count; i++)
+        for (int i = 0; i < tasksAmount; i++)
         {
             taskTickets[i].SetActive(true);
-            dropZones[i].gameObject.SetActive(true);
+            //dropZones[i].gameObject.SetActive(true);
             tasksTxts[i] = taskTickets[i].transform.Find("txt").GetComponent<TMP_Text>();
+        }
+
+        for (int i = 0; i < dropZonesAmount; i++)
+        {
+            dropZones[i].gameObject.SetActive(true);
         }
     }
     

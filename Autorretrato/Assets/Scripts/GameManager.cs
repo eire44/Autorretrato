@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
         agenda = FindObjectOfType<Agenda_Controller>();
 
-        agenda.generateTasks(tasksAmount);
+        agenda.generateTasks(tasksAmount, level_Manager.levels[Level_Manager.levelIndex].dropZonesAmount);
 
         while (agenda.selectedTasks.Count < tasksAmount)
         {
@@ -71,19 +71,19 @@ public class GameManager : MonoBehaviour
 
     public void reduceEnergy(bool taskCompleted)
     {
-        //float amount = 1f / agenda.selectedTasks.Count;
+        float amount = 1f / (agenda.selectedTasks.Count * 2);
 
-        //if (!taskCompleted)
-        //    amount /= 6f;
+        if (!taskCompleted)
+            amount /= 6f;
 
-        //energyFiller.fillAmount -= amount;
+        energyFiller.fillAmount -= amount;
 
-        //checkEnergy();
+        checkEnergy();
     }
 
     public void AddEnergy()
     {
-        float amount = 1f / agenda.selectedTasks.Count;
+        float amount = 1f / (agenda.selectedTasks.Count * 2);
 
         energyFiller.fillAmount += amount;
 

@@ -24,11 +24,14 @@ public class Dialogs_Controller : MonoBehaviour
 
     public void changeDialogTxt(string newTxt)
     {
-        if(btnControlsOK.activeInHierarchy)
+        if(btnControlsOK != null)
         {
-            controlsUnderstood();
+            if (btnControlsOK.activeInHierarchy)
+            {
+                controlsUnderstood();
+            }
+            dialogText.text = newTxt;
         }
-        dialogText.text = newTxt;
     }
 
     public void controlsUnderstood ()

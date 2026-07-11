@@ -4233,7 +4233,7 @@ GameObject:
   - component: {fileID: 268669345}
   - component: {fileID: 268669347}
   m_Layer: 5
-  m_Name: DropZone
+  m_Name: DropZone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8765,7 +8765,7 @@ GameObject:
   - component: {fileID: 531719967}
   - component: {fileID: 531719969}
   m_Layer: 5
-  m_Name: DropZone
+  m_Name: DropZone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14524,7 +14524,7 @@ GameObject:
   - component: {fileID: 870494238}
   - component: {fileID: 870494240}
   m_Layer: 5
-  m_Name: DropZone
+  m_Name: DropZone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15696,14 +15696,18 @@ MonoBehaviour:
       taskObject: {fileID: 1767984423}
     leisureStuff:
     - {fileID: 1952151156}
+    dropZonesAmount: 1
   - tasks:
     - taskName: Put my clothes away
       taskObject: {fileID: 1632517113}
     - taskName: Read a book
       taskObject: {fileID: 480429781}
+    - taskName: Play chess
+      taskObject: {fileID: 1581981981}
     leisureStuff:
     - {fileID: 1952151156}
     - {fileID: 991023542}
+    dropZonesAmount: 2
 --- !u!4 &947331321
 Transform:
   m_ObjectHideFlags: 0
@@ -29474,7 +29478,7 @@ GameObject:
   - component: {fileID: 1519153067}
   - component: {fileID: 1519153066}
   m_Layer: 5
-  m_Name: DropZone
+  m_Name: DropZone4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32761,7 +32765,7 @@ GameObject:
   - component: {fileID: 1694135298}
   - component: {fileID: 1694135297}
   m_Layer: 5
-  m_Name: DropZone
+  m_Name: DropZone5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

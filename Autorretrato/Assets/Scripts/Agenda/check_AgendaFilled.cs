@@ -38,12 +38,16 @@ public class check_AgendaFilled : PuzzleManager
 
     public override bool checkIfTaskCompleted(GameObject taskUI)
     {
-        for (int i = 0; i < agenda_Controller.tasksTxts.Length; i++)
+        for (int i = 0; i < agenda_Controller.dropZones.Length; i++)
         {
-            if (!agenda_Controller.dropZones[i].draggablePlaced)
+            if(agenda_Controller.dropZones[i].gameObject.activeInHierarchy)
             {
-                Debug.Log("NO LLENO");
-                return false;
+                if (!agenda_Controller.dropZones[i].draggablePlaced)
+                {
+                    Debug.Log(agenda_Controller.dropZones[i].name);
+                    Debug.Log("NO LLENO");
+                    return false;
+                }
             }
         } //se cumple si están TODAS las dropzones llenas
 
