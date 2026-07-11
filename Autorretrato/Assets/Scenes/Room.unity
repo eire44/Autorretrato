@@ -3401,7 +3401,7 @@ GameObject:
   - component: {fileID: 195155837}
   - component: {fileID: 195155836}
   - component: {fileID: 195155840}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PC Game Programming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10047,6 +10047,7 @@ GameObject:
   - component: {fileID: 594797085}
   - component: {fileID: 594797086}
   - component: {fileID: 594797088}
+  - component: {fileID: 594797089}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -10090,6 +10091,7 @@ MonoBehaviour:
   - {fileID: -661776525, guid: 4d9f1f1575f668544ac6191c16dcb0d8, type: 3}
   currentFeeling: {fileID: 44721866}
   UI_Controller: {fileID: 982079663}
+  energyManager: {fileID: 594797089}
 --- !u!114 &594797086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10121,6 +10123,26 @@ MonoBehaviour:
   uiClick: {fileID: 982079665}
   distractionFeedback: {fileID: 250021058}
   bubbleFeedback: {fileID: 969853051}
+--- !u!114 &594797089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594797083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7780fbfc18f5fea43a1f7a63ec55a67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 833725839}
+  playerMovement: {fileID: 627544276}
+  tilemap: {fileID: 1129206520}
+  minSpeed: 3.5
+  maxSpeed: 6
+  minPitch: 0.9
+  maxPitch: 1
+  lowEnergyColor: {r: 0.627451, g: 0.72156864, b: 0.84313726, a: 1}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -30061,7 +30083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1558794951
 Transform:
   m_ObjectHideFlags: 0

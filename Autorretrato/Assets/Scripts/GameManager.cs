@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Sprite[] avatarFeelings;
     public Image currentFeeling;
     public UI_Controller UI_Controller;
+    public EnergyManager energyManager;
 
     int tasksNumber = 3;
     
@@ -94,5 +95,7 @@ public class GameManager : MonoBehaviour
         {
             currentFeeling.sprite = avatarFeelings[0];
         }
+
+        energyManager.UpdateAesthetics(energyFiller.fillAmount);
     }
 }
