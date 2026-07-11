@@ -8,6 +8,11 @@ public class check_AgendaFilled : PuzzleManager
 {
     public GameObject taskScreen;
     bool playAudioOnce = false;
+    Agenda_Controller agenda_Controller;
+    private void Start()
+    {
+        agenda_Controller = GetComponent<Agenda_Controller>();
+    }
 
     private void Update()
     {
@@ -18,12 +23,14 @@ public class check_AgendaFilled : PuzzleManager
                 if (!playAudioOnce)
                 {
                     playAudioOnce = true;
+                    puzzleSolved = true;
                     activateFeedback(true, feedbackBubble);
                 }
             }
             else
             {
                 playAudioOnce = false;
+                puzzleSolved = false;
                 activateFeedback(false, feedbackBubble);
             }
         }
@@ -31,15 +38,14 @@ public class check_AgendaFilled : PuzzleManager
 
     public override bool checkIfTaskCompleted(GameObject taskUI)
     {
-        Agenda_Controller agenda_Controller = GetComponent<Agenda_Controller>();
-
         for (int i = 0; i < agenda_Controller.tasksTxts.Length; i++)
         {
             if (!agenda_Controller.dropZones[i].draggablePlaced)
             {
+                Debug.Log("NO LLENO");
                 return false;
             }
-        }
+        } //se cumple si están TODAS las dropzones llenas
 
         //foreach (DropZone dZone in agenda_Controller.dropZones)
         //{
@@ -49,6 +55,7 @@ public class check_AgendaFilled : PuzzleManager
         //    }
         //}
 
+        Debug.Log("LLENO");
         return true;
     }
 }

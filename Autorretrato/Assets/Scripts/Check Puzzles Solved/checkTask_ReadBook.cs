@@ -10,19 +10,25 @@ public class checkTask_ReadBook : PuzzleManager
 
     private void Update()
     {
-        if (taskScreen.activeInHierarchy)
+        if(!puzzleSolved)
         {
-            if(checkIfTaskCompleted(taskScreen))
+            if (taskScreen.activeInHierarchy)
             {
-                if (!playAudioOnce)
+                if (checkIfTaskCompleted(taskScreen))
                 {
-                    playAudioOnce = true;
-                    activateFeedback(true, feedbackBubble);
+                    if (!playAudioOnce)
+                    {
+                        playAudioOnce = true;
+                        puzzleSolved = true;
+                        activateFeedback(true, feedbackBubble);
+                    }
                 }
-            } else
-            {
-                playAudioOnce = false;
-                activateFeedback(false, feedbackBubble);
+                else
+                {
+                    playAudioOnce = false;
+                    puzzleSolved = false;
+                    activateFeedback(false, feedbackBubble);
+                }
             }
         }
     }

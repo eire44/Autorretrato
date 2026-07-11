@@ -72,6 +72,7 @@ public class UI_Controller : MonoBehaviour
 
     public void Jugar()
     {
+        Level_Manager.levelIndex++;
         Time.timeScale = 1f;
         audioSource_Click.Play();
         SceneManager.LoadScene("Room");

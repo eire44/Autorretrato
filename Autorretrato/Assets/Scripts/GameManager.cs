@@ -17,18 +17,23 @@ public class GameManager : MonoBehaviour
     public EnergyManager energyManager;
 
     int tasksNumber = 3;
-    
+    Level_Manager level_Manager;
+
     void Start()
     {
-        tasksLeft = tasksNumber;
+        level_Manager = FindObjectOfType<Level_Manager>();
+
+        //tasksLeft = tasksNumber;
+        int tasksAmount = level_Manager.levels[Level_Manager.levelIndex].tasks.Count;
+        tasksLeft = tasksAmount;
 
         agenda = FindObjectOfType<Agenda_Controller>();
 
-        agenda.generateTasks(tasksNumber);
+        agenda.generateTasks(tasksAmount);
 
-        while (agenda.selectedTasks.Count < tasksNumber)
+        while (agenda.selectedTasks.Count < tasksAmount)
         {
-            agenda.selectedTasks.Add(agenda.tasksList[Random.Range(0, agenda.tasksList.Count)]);
+            agenda.selectedTasks.Add(level_Manager.levels[Level_Manager.levelIndex].tasks[Random.Range(0, tasksAmount)]);
         }
 
         agenda.writeTasks();
@@ -54,18 +59,26 @@ public class GameManager : MonoBehaviour
             bubble.gameObject.SetActive(true);
             t.taskObject.layer = LayerMask.NameToLayer("Interactive Objects");
         }
+
+        foreach (GameObject distraction in level_Manager.levels[Level_Manager.levelIndex].leisureStuff)
+        {
+            distraction.SetActive(true);
+            //Transform bubble = distraction.taskObject.transform.Find("Bubble");
+            //bubble.gameObject.SetActive(true);
+            //distraction.taskObject.layer = LayerMask.NameToLayer("Interactive Objects");
+        }
     }
 
     public void reduceEnergy(bool taskCompleted)
     {
-        float amount = 1f / agenda.selectedTasks.Count;
+        //float amount = 1f / agenda.selectedTasks.Count;
 
-        if (!taskCompleted)
-            amount /= 6f;
+        //if (!taskCompleted)
+        //    amount /= 6f;
 
-        energyFiller.fillAmount -= amount;
+        //energyFiller.fillAmount -= amount;
 
-        checkEnergy();
+        //checkEnergy();
     }
 
     public void AddEnergy()

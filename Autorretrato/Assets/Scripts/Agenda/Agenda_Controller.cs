@@ -13,12 +13,27 @@ public class Agenda_Controller : MonoBehaviour
     public GameObject[] taskTickets;
     public DropZone[] dropZones;
     int taskIndex = 0;
+    Level_Manager level_Manager;
+
+    private void Start()
+    {
+        level_Manager = FindObjectOfType<Level_Manager>();
+    }
 
     public void generateTasks(int tasksAmount)
     {
-        tasksTxts = new TMP_Text[tasksAmount];
+        //tasksTxts = new TMP_Text[tasksAmount];
 
-        for (int i = 0; i < tasksAmount; i++)
+        //for (int i = 0; i < tasksAmount; i++)
+        //{
+        //    taskTickets[i].SetActive(true);
+        //    dropZones[i].gameObject.SetActive(true);
+        //    tasksTxts[i] = taskTickets[i].transform.Find("txt").GetComponent<TMP_Text>();
+        //}
+
+        tasksTxts = new TMP_Text[level_Manager.levels[Level_Manager.levelIndex].tasks.Count];
+
+        for (int i = 0; i < level_Manager.levels[Level_Manager.levelIndex].tasks.Count; i++)
         {
             taskTickets[i].SetActive(true);
             dropZones[i].gameObject.SetActive(true);

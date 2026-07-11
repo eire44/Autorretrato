@@ -19,6 +19,7 @@ public class EnergyManager : MonoBehaviour
 
     [Header("Tilemap")]
     public Color lowEnergyColor;
+    //A0B8D7 o 819BBC
 
     public void UpdateAesthetics(float energy)
     {

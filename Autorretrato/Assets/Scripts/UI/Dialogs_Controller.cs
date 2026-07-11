@@ -12,7 +12,7 @@ public class Dialogs_Controller : MonoBehaviour
     
     void Start()
     {
-        if(true) //persistir primer partida
+        if(Level_Manager.levelIndex == 0)
         {
             btnControlsOK.SetActive(true);
         }

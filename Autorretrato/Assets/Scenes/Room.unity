@@ -771,7 +771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &22548771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4238,7 +4238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &268669344
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5569,7 +5569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play Again
+  m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd2b3432798b8e345b21218c15133ce0, type: 2}
   m_sharedMaterial: {fileID: 6010200949521090993, guid: cd2b3432798b8e345b21218c15133ce0, type: 2}
@@ -6924,7 +6924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &421355860
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8770,7 +8770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &531719966
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13585,7 +13585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &833392018
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14529,7 +14529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &870494237
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14698,7 +14698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &885045770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15661,6 +15661,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtSong: {fileID: 1502671679}
   audioSource: {fileID: 991023548}
+--- !u!1 &947331319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 947331321}
+  - component: {fileID: 947331320}
+  m_Layer: 0
+  m_Name: Level Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &947331320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947331319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c6ba1915b97ed43b1868d6a28f7097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - tasks:
+    - taskName: Draw portrait
+      taskObject: {fileID: 1767984423}
+    leisureStuff:
+    - {fileID: 1952151156}
+  - tasks:
+    - taskName: Put my clothes away
+      taskObject: {fileID: 1632517113}
+    - taskName: Read a book
+      taskObject: {fileID: 480429781}
+    leisureStuff:
+    - {fileID: 1952151156}
+    - {fileID: 991023542}
+--- !u!4 &947331321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947331319}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 786.323, y: 553.12494, z: 4.5586495}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &969305149
 GameObject:
   m_ObjectHideFlags: 0
@@ -16365,7 +16423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadf055d8d80cad41a9e3e0c04ad6e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoRestante: 180
+  tiempoRestante: 300
   textoTiempo: {fileID: 934915830}
   flagEndGame: 1
   clockSound: {fileID: 653408859}
@@ -16723,7 +16781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &991023543
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36274,7 +36332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1952151157
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43609,3 +43667,4 @@ SceneRoots:
   - {fileID: 1436455453}
   - {fileID: 1734793803}
   - {fileID: 908870842}
+  - {fileID: 947331321}

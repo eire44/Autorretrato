@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
-    //A0B8D7 o 819BBC
     public AudioSource taskDone;
     public GameObject feedbackBubble;
     [HideInInspector] public virtual bool puzzleSolved { get; set; } = false;
