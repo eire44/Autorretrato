@@ -15,6 +15,8 @@ public class Forms_Controller : PuzzleManager
 
     public List<options_Controller> options = new List<options_Controller>();
     bool playAudioOnce = false;
+    public GameObject greenCheck1;
+    public GameObject greenCheck2;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,7 @@ public class Forms_Controller : PuzzleManager
         else
         {
             playAudioOnce = false;
+            puzzleSolved = false;
             activateFeedback(false, feedbackBubble);
         }
     }
@@ -65,6 +68,7 @@ public class Forms_Controller : PuzzleManager
             if (!playAudioOnce)
             {
                 playAudioOnce = true;
+                puzzleSolved = true;
                 activateFeedback(true, feedbackBubble);
             }
         }
@@ -84,5 +88,8 @@ public class Forms_Controller : PuzzleManager
         options[1].correctAnswer = questions[questionIndex].answers[1].correctAnswer;
 
         questionIndex++;
+
+        greenCheck1.SetActive(false);
+        greenCheck2.SetActive(false);
     }
 }

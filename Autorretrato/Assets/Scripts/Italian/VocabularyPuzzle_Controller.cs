@@ -22,12 +22,6 @@ public class VocabularyPuzzle_Controller : PuzzleManager
         changeQuestion();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void changeCardColor(Image cardPressed, bool correct)
     {
         int index = 0;
@@ -46,6 +40,7 @@ public class VocabularyPuzzle_Controller : PuzzleManager
                     imgSquares[index].color = color_WrongOption;
 
                     playAudioOnce = false;
+                    puzzleSolved = false;
                     activateFeedback(false, feedbackBubble);
                 }
             }
@@ -65,6 +60,7 @@ public class VocabularyPuzzle_Controller : PuzzleManager
             if (!playAudioOnce)
             {
                 playAudioOnce = true;
+                puzzleSolved = true;
                 activateFeedback(true, feedbackBubble);
             }
         }

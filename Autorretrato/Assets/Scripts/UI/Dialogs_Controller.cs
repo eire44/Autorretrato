@@ -9,6 +9,7 @@ public class Dialogs_Controller : MonoBehaviour
     public TMP_Text dialogText;
     int dialogIndex = 0;
     public GameObject btnControlsOK;
+    public Level_Manager level_Manager;
     
     void Start()
     {
@@ -20,6 +21,17 @@ public class Dialogs_Controller : MonoBehaviour
         {
             btnControlsOK.SetActive(false);
         }
+
+        changeDialogTxt(level_Manager.levels[Level_Manager.levelIndex].levelMessage);
+        
+        if(Level_Manager.levelIndex >= 3)
+        {
+            if (Level_Manager.previousLevel_TasksAmount <= 2)
+            {
+                changeDialogTxt("I feel like I haven't been productive lately :(. Maybe I should do more");
+            }
+        }
+        
     }
 
     public void changeDialogTxt(string newTxt)

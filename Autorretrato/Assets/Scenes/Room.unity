@@ -7600,13 +7600,13 @@ GameObject:
   - component: {fileID: 480429785}
   - component: {fileID: 480429787}
   - component: {fileID: 480429786}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Bookshelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &480429782
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8169,7 +8169,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 967039921, guid: 735ead8e8340ab24da788432fc42d24e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9405,7 +9405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &572593981
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9896,7 +9896,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: -393617118, guid: 9b0df1ce78d1ddb458fe1587beceea7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10549,7 +10549,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011185288, y: -0.2664975}
+  m_Offset: {x: 0.011185288, y: -0.3089304}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10560,7 +10560,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.630883, y: 0.60731936}
+  m_Size: {x: 0.630883, y: 0.69218516}
   m_EdgeRadius: 0
 --- !u!50 &627544278
 Rigidbody2D:
@@ -12782,7 +12782,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 982079663}
         m_TargetAssemblyTypeName: UI_Controller, Assembly-CSharp
-        m_MethodName: Jugar
+        m_MethodName: jugarSiguienteNivel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13376,7 +13376,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_Sprite: {fileID: 181532551, guid: 3a729b1a1901a80429f8c48bf199d5b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15727,22 +15727,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - tasks:
-    - taskName: Draw portrait
-      taskObject: {fileID: 1767984423}
+    - taskName: Read a book
+      taskObject: {fileID: 480429781}
     leisureStuff:
     - {fileID: 1952151156}
     dropZonesAmount: 1
+    levelMessage: "Press W-A-S-D to move.\nYou can use your mouse to interact. \nDistractions
+      will help you not to get exhausted."
   - tasks:
     - taskName: Put my clothes away
       taskObject: {fileID: 1632517113}
-    - taskName: Read a book
-      taskObject: {fileID: 480429781}
-    - taskName: Play chess
-      taskObject: {fileID: 1581981981}
+    - taskName: Draw portrait
+      taskObject: {fileID: 1767984423}
+    - taskName: Take the Green Cross exam
+      taskObject: {fileID: 1145277259}
     leisureStuff:
     - {fileID: 1952151156}
     - {fileID: 991023542}
     dropZonesAmount: 2
+    levelMessage: "Yesterday was fun, but I surely could have done more with that
+      time. Let\xB4s do more today!"
+  - tasks:
+    - taskName: Complete the game scene
+      taskObject: {fileID: 580844342}
+    - taskName: Do my chess homework
+      taskObject: {fileID: 1581981981}
+    - taskName: Reread the book
+      taskObject: {fileID: 480429781}
+    leisureStuff:
+    - {fileID: 22548768}
+    - {fileID: 1539267913}
+    dropZonesAmount: 3
+    levelMessage: "I still feel like I could do more. \nAlso, maybe I should reread
+      the book, so I can understand it in greater depth."
+  - tasks:
+    - taskName: Put my clothes away
+      taskObject: {fileID: 1632517113}
+    - taskName: Do the portrait homework
+      taskObject: {fileID: 1767984423}
+    - taskName: Do my italian homework
+      taskObject: {fileID: 1580027883}
+    - taskName: Do my programming homework
+      taskObject: {fileID: 195155834}
+    leisureStuff:
+    - {fileID: 1539267913}
+    - {fileID: 991023542}
+    dropZonesAmount: 4
+    levelMessage: "I have so much pending homework!! \nPlease help me to catch up
+      with it!!!"
 --- !u!4 &947331321
 Transform:
   m_ObjectHideFlags: 0
@@ -16519,6 +16551,7 @@ MonoBehaviour:
     day on my agenda.
   dialogText: {fileID: 1250357170}
   btnControlsOK: {fileID: 1402210562}
+  level_Manager: {fileID: 947331320}
 --- !u!82 &982079665
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19956,7 +19989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1123726204
 Transform:
   m_ObjectHideFlags: 0
@@ -22769,6 +22802,8 @@ MonoBehaviour:
   options:
   - {fileID: 546110510}
   - {fileID: 1508846073}
+  greenCheck1: {fileID: 423768505}
+  greenCheck2: {fileID: 1129841361}
 --- !u!1 &1146171353
 GameObject:
   m_ObjectHideFlags: 0
@@ -30780,13 +30815,13 @@ GameObject:
   - component: {fileID: 1581981984}
   - component: {fileID: 1581981985}
   - component: {fileID: 1581981986}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: tablero2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1581981982
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32101,13 +32136,13 @@ GameObject:
   - component: {fileID: 1632517118}
   - component: {fileID: 1632517119}
   - component: {fileID: 1632517120}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Closet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1632517114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33271,7 +33306,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 1585353466, guid: 4e4aef4e68e8bb541a6aa8d33ba7d3db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -33639,7 +33674,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1064234622, guid: e50557a1f9ac04145969482e4ccda9fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -35264,7 +35299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1872012386
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35745,7 +35780,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 104226274, guid: a8c3487aa694c404fb0b569203f20b07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -39714,7 +39749,7 @@ RectTransform:
   m_GameObject: {fileID: 1066705219747526074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.4, y: 3.4, z: 2.1031}
+  m_LocalScale: {x: 2.8454401, y: 4.03104, z: 2.4934356}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 243360854788020223}
@@ -39722,7 +39757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: -4}
+  m_AnchoredPosition: {x: 3, y: -8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6583576239827326
@@ -39820,14 +39855,14 @@ RectTransform:
   m_GameObject: {fileID: 7038831599311230168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8762917, y: 0.67269635, z: 1}
+  m_LocalScale: {x: 0.7391123, y: 0.56738895, z: 0.8434547}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3333356731498372}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1.1699219}
+  m_AnchoredPosition: {x: 0, y: 0.98676777}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &322149191631024864
@@ -40311,7 +40346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Try Again
+  m_text: Try Day Again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd2b3432798b8e345b21218c15133ce0, type: 2}
   m_sharedMaterial: {fileID: 6010200949521090993, guid: cd2b3432798b8e345b21218c15133ce0, type: 2}
@@ -40374,7 +40409,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -30.430283, y: 0, z: -31.444527, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

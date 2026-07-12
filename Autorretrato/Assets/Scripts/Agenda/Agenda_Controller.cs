@@ -17,28 +17,20 @@ public class Agenda_Controller : MonoBehaviour
     private void Awake()
     {
         var controllers = FindObjectsOfType<Agenda_Controller>();
-        //Debug.Log($"Hay {controllers.Length} Agenda_Controller en la escena.");
     }
 
     private void Start()
     {
         level_Manager = FindObjectOfType<Level_Manager>();
-
-        //for (int i = 0; i < taskTickets.Length; i++)
-        //{
-        //    Debug.Log($"[{i}] = {taskTickets[i]}");
-        //}
     }
 
     public void generateTasks(int tasksAmount, int dropZonesAmount)
     {
-        //Debug.Log($"Start: {taskTickets.Length}");
         tasksTxts = new TMP_Text[tasksAmount];
 
         for (int i = 0; i < tasksAmount; i++)
         {
             taskTickets[i].SetActive(true);
-            //dropZones[i].gameObject.SetActive(true);
             tasksTxts[i] = taskTickets[i].transform.Find("txt").GetComponent<TMP_Text>();
         }
 

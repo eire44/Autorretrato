@@ -9,4 +9,6 @@ public class Level
     public List<Task> tasks;
     public List<GameObject> leisureStuff;
     public int dropZonesAmount;
+
+    [TextArea] public string levelMessage;
 }

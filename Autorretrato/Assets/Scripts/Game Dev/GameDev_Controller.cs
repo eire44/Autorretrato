@@ -17,12 +17,14 @@ public class GameDev_Controller : PuzzleManager
                 if (!playAudioOnce)
                 {
                     playAudioOnce = true;
+                    puzzleSolved = true;
                     activateFeedback(true, feedbackBubble);
                 }
             }
             else
             {
                 playAudioOnce = false;
+                puzzleSolved = false;
                 activateFeedback(false, feedbackBubble);
             }
         }

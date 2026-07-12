@@ -23,18 +23,21 @@ public class Check_Puzzle : PuzzleManager
                     if (!playAudioOnce)
                     {
                         playAudioOnce = true;
+                        puzzleSolved = true;
                         activateFeedback(true, feedbackBubble);
                     }
                 }
                 else
                 {
                     playAudioOnce = false;
+                    puzzleSolved = false;
                     activateFeedback(false, feedbackBubble);
                 }
             }
             else
             {
                 playAudioOnce = false;
+                puzzleSolved = false;
                 activateFeedback(false, feedbackBubble);
             }
         }
