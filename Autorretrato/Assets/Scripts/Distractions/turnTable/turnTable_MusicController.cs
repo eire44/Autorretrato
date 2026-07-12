@@ -33,11 +33,15 @@ public class turnTable_MusicController : MonoBehaviour
             turntable_playMusic song = dZ.draggedObject.GetComponent<turntable_playMusic>();
             if (song != null)
             {
-                if (!musicPlayed.Contains(song.songName))
-                {
-                    FindObjectOfType<GameManager>().AddEnergy();
-                    FindObjectOfType<DistractionsManager>().activateFeedback(true);
-                }
+                
+
+                
+                    if (!musicPlayed.Contains(song.songName))
+                    {
+                        FindObjectOfType<GameManager>().AddEnergy();
+                        FindObjectOfType<DistractionsManager>().activateFeedback(true);
+                    }
+                
 
                 if (playSong)
                 {

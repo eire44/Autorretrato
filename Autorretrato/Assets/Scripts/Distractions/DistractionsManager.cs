@@ -28,32 +28,4 @@ public class DistractionsManager : MonoBehaviour
         }
         bubbleFeedback.SetActive(puzzleComplete);
     }
-
-    public void closeTaskUI()
-    {
-        uiClick.Play();
-        distractionUI.SetActive(false);
-        HUD.SetActive(true);
-        bubbleFeedback.SetActive(false);
-        Time.timeScale = 1f;
-
-        //PuzzleManager checkTask = gameObject.GetComponent<PuzzleManager>();
-        //if (checkTask != null)
-        //{
-        //    checkTask.checkIfTaskCompleted(distractionUI);
-        //    if (checkTask.checkIfTaskCompleted(taskUI))
-        //    {
-        //        endTask();
-        //        GameManager gm = FindObjectOfType<GameManager>();
-        //        if (isAgenda)
-        //        {
-        //            gm.activateTasks();
-        //        }
-        //        else
-        //        {
-        //            gm.taskCompleted();
-        //        }
-        //    }
-        //}
-    }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -66,26 +67,29 @@ public class GameManager : MonoBehaviour
         completeTasksIndex++;
         tasksLeft--;
 
-        if(Level_Manager.levelIndex >= level_Manager.levels.Count)
+        if (completeTasksIndex >= agenda.selectedTasks.Count)
         {
-            Level_Manager.levelIndex = 0;
-            //pantalla fin del juego
-        }
-        else
-        {
-            if (completeTasksIndex >= agenda.selectedTasks.Count)
+            if (Level_Manager.levelIndex + 1 >= level_Manager.levels.Count)
+            {
+                Level_Manager.levelIndex = 0;
+
+                Time.timeScale = 0f;
+                SceneManager.LoadScene("End Scene");
+            }
+            else
             {
                 Level_Manager.previousLevel_TasksAmount = agenda.selectedTasks.Count;
                 UI_Controller.showWinningScreen();
             }
         }
+        
     }
 
     public void activateTasks()
     {
         foreach (GameObject task in agenda.selectedTasks)
         {
-            if(task.activeInHierarchy)
+            if (task.activeInHierarchy)
             {
                 Transform bubble = task.transform.Find("Bubble");
                 bubble.gameObject.SetActive(true);
@@ -94,19 +98,22 @@ public class GameManager : MonoBehaviour
             else
             {
                 task.SetActive(true);
+                Transform bubble = task.transform.Find("Bubble");
+                bubble.gameObject.SetActive(true);
             }
-            /* cuando hayan mas tareas, en vez de habilitarlos con la layer y aparecer 
-             las bubbles, activar o desactivar todo el t.taskObject */
-            ////Transform bubble = t.taskObject.transform.Find("Bubble");
-            ////bubble.gameObject.SetActive(true);
-            ////t.taskObject.layer = LayerMask.NameToLayer("Interactive Objects");
+
+            Distractions_UI originalDistraction = task.GetComponent<Distractions_UI>();
+            if(originalDistraction != null)
+            {
+                originalDistraction.distractionToTask = true;
+            }
         }
 
         foreach (GameObject distraction in level_Manager.levels[Level_Manager.levelIndex].leisureStuff)
         {
             distraction.SetActive(true);
-            //Transform bubble = distraction.taskObject.transform.Find("Bubble");
-            //bubble.gameObject.SetActive(true);
+            Transform bubble = distraction.transform.Find("DistractionBubble");
+            bubble.gameObject.SetActive(true);
             //distraction.taskObject.layer = LayerMask.NameToLayer("Interactive Objects");
         }
     }

@@ -4,7 +4,7 @@ using System.ComponentModel;
 using UnityEngine;
 using TMPro;
 
-//[RequireComponent(typeof(Distractions_UI))]
+[RequireComponent(typeof(Distractions_UI))]
 public class Merienda_Puzzle_Controller : MonoBehaviour
 {
     public List<DropZone> platesList = new List<DropZone>();
@@ -15,29 +15,22 @@ public class Merienda_Puzzle_Controller : MonoBehaviour
     public Player_Interact player_Interact;
     public GameObject plates;
 
-    //Distractions_UI distractions_UI;
-
-    //string selectedFood = "";
-    //string selectedDrink = "";
-    // Start is called before the first frame update
+    Distractions_UI distractions_UI;
     void Start()
     {
-        //distractions_UI = GetComponent<Distractions_UI>();
-
-        //chooseFood();
+        distractions_UI = GetComponent<Distractions_UI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!puzzleSolved)
+        if(!distractions_UI.puzzleSolved)
         {
             if(checkIfMeriendaSet())
             {
-                puzzleSolved = true;
+                distractions_UI.puzzleSolved = true;
                 Bubble.SetActive(false);
                 player_Interact.onDistractionArea = false;
-                FindObjectOfType<GameManager>().AddEnergy();
                 plates.layer = LayerMask.NameToLayer("Default");
                 foreach (DropZone dz in platesList)
                 {
@@ -47,7 +40,12 @@ public class Merienda_Puzzle_Controller : MonoBehaviour
                 {
                     food.enabled = false;
                 }
-                FindObjectOfType<DistractionsManager>().activateFeedback(true);
+
+                if (!distractions_UI.distractionToTask)
+                {
+                    FindObjectOfType<GameManager>().AddEnergy();
+                    FindObjectOfType<DistractionsManager>().activateFeedback(true);
+                }
             }
         }
     }
@@ -94,7 +92,7 @@ public class Merienda_Puzzle_Controller : MonoBehaviour
 
         if (drinkPlaced && foodPlaced)
         {
-            puzzleSolved = true;
+            distractions_UI.puzzleSolved = true;
             return true;
         }
         else

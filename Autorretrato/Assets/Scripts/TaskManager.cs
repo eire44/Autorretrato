@@ -30,7 +30,7 @@ public class TaskManager : MonoBehaviour
         taskUI.SetActive(false);
         HUD.SetActive(true);
         Time.timeScale = 1f;
-        //bajar energia
+        
         PuzzleManager checkTask = gameObject.GetComponent<PuzzleManager>();
         checkTask.feedbackBubble.SetActive(false);
         GameManager gm = FindObjectOfType<GameManager>();

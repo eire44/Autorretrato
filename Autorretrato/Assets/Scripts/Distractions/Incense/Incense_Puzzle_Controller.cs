@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Distractions_UI))]
 public class Incense_Puzzle_Controller : MonoBehaviour
 {
     public DragIncense incense;
@@ -11,10 +12,16 @@ public class Incense_Puzzle_Controller : MonoBehaviour
     public GameObject SahumerioSet;
     public Player_Interact player_Interact;
     public List<DropZone> dropZones = new List<DropZone>();
+    Distractions_UI distractions_UI;
+    void Start()
+    {
+        distractions_UI = GetComponent<Distractions_UI>();
+    }
+
 
     void Update()
     {
-        if (!puzzleSolved)
+        if (!distractions_UI.puzzleSolved)
         {
             checkIncensePlacedandLit();
         }
@@ -24,17 +31,21 @@ public class Incense_Puzzle_Controller : MonoBehaviour
     {
         if(smoke.activeInHierarchy && incense.draggablePlaced)
         {
-            puzzleSolved = true;
+            distractions_UI.puzzleSolved = true;
             incense.enabled = false;
             Bubble.SetActive(false);
             player_Interact.onDistractionArea = false;
-            FindObjectOfType<GameManager>().AddEnergy();
             SahumerioSet.layer = LayerMask.NameToLayer("Default");
             foreach (DropZone dz in dropZones)
             {
                 dz.gameObject.SetActive(false);
             }
-            FindObjectOfType<DistractionsManager>().activateFeedback(true);
+
+            if (!distractions_UI.distractionToTask)
+            {
+                FindObjectOfType<GameManager>().AddEnergy();
+                FindObjectOfType<DistractionsManager>().activateFeedback(true);
+            }
         }
     }
 }

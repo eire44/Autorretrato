@@ -67,7 +67,18 @@ public class Player_Interact : MonoBehaviour
     void onArea(Color color, Transform collision, string dialogText)
     {
         Transform bubble = collision.Find("Bubble");
-        bubble.GetComponent<Renderer>().material.color = color;
+
+        if(bubble != null)
+        {
+            bubble.GetComponent<Renderer>().material.color = color;
+        }
+
+        Transform disrtactionBubble = collision.Find("DistractionBubble");
+
+        if (disrtactionBubble != null)
+        {
+            disrtactionBubble.GetComponent<Renderer>().material.color = color;
+        }
 
         Dialogs_Controller dialogs_Controller = FindObjectOfType<Dialogs_Controller>();
 
