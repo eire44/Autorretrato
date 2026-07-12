@@ -25,18 +25,31 @@ public class GameManager : MonoBehaviour
 
         //tasksLeft = tasksNumber;
         int tasksAmount = level_Manager.levels[Level_Manager.levelIndex].tasks.Count;
-        tasksLeft = tasksAmount;
 
         agenda = FindObjectOfType<Agenda_Controller>();
 
         agenda.generateTasks(tasksAmount, level_Manager.levels[Level_Manager.levelIndex].dropZonesAmount);
 
-        while (agenda.selectedTasks.Count < tasksAmount)
-        {
-            agenda.selectedTasks.Add(level_Manager.levels[Level_Manager.levelIndex].tasks[Random.Range(0, tasksAmount)]);
-        }
-
+        
         agenda.writeTasks();
+    }
+
+    public void saveSelectedTasks()
+    {
+        foreach (GameObject taskTicket in agenda.taskTickets)
+        {
+            DraggableObject dO = taskTicket.GetComponent<DraggableObject>();
+            if(dO != null)
+            {
+                if (dO.draggablePlaced)
+                {
+                    tasksLeft++;
+
+                    chosenTask chosenTask = dO.gameObject.GetComponent<chosenTask>();
+                    agenda.selectedTasks.Add(chosenTask.taskObject);
+                }
+            }
+        }
     }
 
     public void taskCompleted()
@@ -51,13 +64,15 @@ public class GameManager : MonoBehaviour
 
     public void activateTasks()
     {
-        foreach (Task t in agenda.selectedTasks)
+        foreach (GameObject task in agenda.selectedTasks)
         {
             /* cuando hayan mas tareas, en vez de habilitarlos con la layer y aparecer 
              las bubbles, activar o desactivar todo el t.taskObject */
-            Transform bubble = t.taskObject.transform.Find("Bubble");
-            bubble.gameObject.SetActive(true);
-            t.taskObject.layer = LayerMask.NameToLayer("Interactive Objects");
+            ////Transform bubble = t.taskObject.transform.Find("Bubble");
+            ////bubble.gameObject.SetActive(true);
+            ////t.taskObject.layer = LayerMask.NameToLayer("Interactive Objects");
+            
+            task.SetActive(true);
         }
 
         foreach (GameObject distraction in level_Manager.levels[Level_Manager.levelIndex].leisureStuff)

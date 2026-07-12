@@ -2272,7 +2272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &122909975
 Transform:
   m_ObjectHideFlags: 0
@@ -3401,13 +3401,13 @@ GameObject:
   - component: {fileID: 195155837}
   - component: {fileID: 195155836}
   - component: {fileID: 195155840}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PC Game Programming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &195155835
 Transform:
   m_ObjectHideFlags: 0
@@ -6918,6 +6918,7 @@ GameObject:
   - component: {fileID: 421355863}
   - component: {fileID: 421355862}
   - component: {fileID: 421355861}
+  - component: {fileID: 421355864}
   m_Layer: 5
   m_Name: Task
   m_TagString: Untagged
@@ -7003,6 +7004,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421355859}
   m_CullTransparentMesh: 1
+--- !u!114 &421355864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421355859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507bab8b655b3c949a2e05874d9a749f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskObject: {fileID: 0}
 --- !u!1 &423768505
 GameObject:
   m_ObjectHideFlags: 0
@@ -7586,13 +7600,13 @@ GameObject:
   - component: {fileID: 480429785}
   - component: {fileID: 480429787}
   - component: {fileID: 480429786}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookshelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &480429782
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8505,13 +8519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 914e8648641326b4482b97db667ffa4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tasksList:
-  - taskName: Put my clothes away
-    taskObject: {fileID: 1632517113}
-  - taskName: Draw portrait
-    taskObject: {fileID: 1767984423}
-  - taskName: Read a book
-    taskObject: {fileID: 480429781}
   tasksTxts: []
   taskTickets:
   - {fileID: 885045769}
@@ -9314,7 +9321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &569884996
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9398,7 +9405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &572593981
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9480,7 +9487,7 @@ GameObject:
   - component: {fileID: 580844346}
   - component: {fileID: 580844345}
   - component: {fileID: 580844349}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PC Game dev
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10542,7 +10549,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011185288, y: -0.0279634}
+  m_Offset: {x: 0.011185288, y: -0.2664975}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10553,7 +10560,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.630883, y: 0.9440732}
+  m_Size: {x: 0.630883, y: 0.60731936}
   m_EdgeRadius: 0
 --- !u!50 &627544278
 Rigidbody2D:
@@ -11846,7 +11853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &724055642
 Transform:
   m_ObjectHideFlags: 0
@@ -13579,6 +13586,7 @@ GameObject:
   - component: {fileID: 833392021}
   - component: {fileID: 833392020}
   - component: {fileID: 833392019}
+  - component: {fileID: 833392022}
   m_Layer: 5
   m_Name: Task
   m_TagString: Untagged
@@ -13664,6 +13672,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833392017}
   m_CullTransparentMesh: 1
+--- !u!114 &833392022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833392017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507bab8b655b3c949a2e05874d9a749f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskObject: {fileID: 0}
 --- !u!1 &833725838
 GameObject:
   m_ObjectHideFlags: 0
@@ -14692,6 +14713,7 @@ GameObject:
   - component: {fileID: 885045772}
   - component: {fileID: 885045771}
   - component: {fileID: 885045773}
+  - component: {fileID: 885045774}
   m_Layer: 5
   m_Name: Task
   m_TagString: Untagged
@@ -14777,6 +14799,19 @@ MonoBehaviour:
   draggableAudio: {fileID: 54389410}
   dragging: 0
   target: {fileID: 0}
+--- !u!114 &885045774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885045769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507bab8b655b3c949a2e05874d9a749f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskObject: {fileID: 0}
 --- !u!1 &892057090
 GameObject:
   m_ObjectHideFlags: 0
@@ -19921,7 +19956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1123726204
 Transform:
   m_ObjectHideFlags: 0
@@ -22512,7 +22547,7 @@ GameObject:
   - component: {fileID: 1145277263}
   - component: {fileID: 1145277264}
   - component: {fileID: 1145277265}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PC Grenn Cross
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23255,7 +23290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1166864540
 Transform:
   m_ObjectHideFlags: 0
@@ -26153,6 +26188,7 @@ GameObject:
   - component: {fileID: 1311419330}
   - component: {fileID: 1311419329}
   - component: {fileID: 1311419328}
+  - component: {fileID: 1311419331}
   m_Layer: 5
   m_Name: Task (2)
   m_TagString: Untagged
@@ -26238,6 +26274,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311419326}
   m_CullTransparentMesh: 1
+--- !u!114 &1311419331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311419326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507bab8b655b3c949a2e05874d9a749f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskObject: {fileID: 0}
 --- !u!1 &1318990770
 GameObject:
   m_ObjectHideFlags: 0
@@ -30145,7 +30194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1558794951
 Transform:
   m_ObjectHideFlags: 0
@@ -30448,7 +30497,7 @@ GameObject:
   - component: {fileID: 1580027886}
   - component: {fileID: 1580027887}
   - component: {fileID: 1580027888}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cellphone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30731,13 +30780,13 @@ GameObject:
   - component: {fileID: 1581981984}
   - component: {fileID: 1581981985}
   - component: {fileID: 1581981986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tablero2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1581981982
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30838,7 +30887,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.698552, y: 0.46317005}
+  m_Offset: {x: 0.698552, y: 0.29464197}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -30849,7 +30898,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5466948, y: 1.9263403}
+  m_Size: {x: 1.5466948, y: 1.5892842}
   m_EdgeRadius: 0
 --- !u!114 &1581981985
 MonoBehaviour:
@@ -32052,13 +32101,13 @@ GameObject:
   - component: {fileID: 1632517118}
   - component: {fileID: 1632517119}
   - component: {fileID: 1632517120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Closet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1632517114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33691,13 +33740,13 @@ GameObject:
   - component: {fileID: 1767984427}
   - component: {fileID: 1767984428}
   - component: {fileID: 1767984429}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drawing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1767984424
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34077,6 +34126,7 @@ GameObject:
   - component: {fileID: 1801529469}
   - component: {fileID: 1801529468}
   - component: {fileID: 1801529467}
+  - component: {fileID: 1801529470}
   m_Layer: 5
   m_Name: Task (3)
   m_TagString: Untagged
@@ -34162,6 +34212,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801529465}
   m_CullTransparentMesh: 1
+--- !u!114 &1801529470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801529465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507bab8b655b3c949a2e05874d9a749f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskObject: {fileID: 0}
 --- !u!1 &1803173947
 GameObject:
   m_ObjectHideFlags: 0
@@ -35201,7 +35264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1872012386
 SpriteRenderer:
   m_ObjectHideFlags: 0

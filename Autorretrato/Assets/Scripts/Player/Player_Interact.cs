@@ -68,7 +68,14 @@ public class Player_Interact : MonoBehaviour
     {
         Transform bubble = collision.Find("Bubble");
         bubble.GetComponent<Renderer>().material.color = color;
-        FindObjectOfType<Dialogs_Controller>().changeDialogTxt(dialogText);
+
+        Dialogs_Controller dialogs_Controller = FindObjectOfType<Dialogs_Controller>();
+
+        if (dialogs_Controller != null)
+        {
+            dialogs_Controller.changeDialogTxt(dialogText);
+        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
