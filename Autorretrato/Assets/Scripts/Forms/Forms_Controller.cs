@@ -46,7 +46,6 @@ public class Forms_Controller : PuzzleManager
             {
                 if (!o.checkAnswer)
                 {
-                    Debug.Log("sin tildar");
                     return false;
                 }
             }
@@ -54,7 +53,6 @@ public class Forms_Controller : PuzzleManager
             {
                 if (o.checkAnswer)
                 {
-                    Debug.Log("check incorrecto");
                     return false;
                 }
             }

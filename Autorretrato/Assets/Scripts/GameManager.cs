@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     {
         level_Manager = FindObjectOfType<Level_Manager>();
 
+        level_Manager.calendar.sprite = level_Manager.calendarSprites[Level_Manager.levelIndex];
+
         //tasksLeft = tasksNumber;
         int tasksAmount = level_Manager.levels[Level_Manager.levelIndex].tasks.Count;
 

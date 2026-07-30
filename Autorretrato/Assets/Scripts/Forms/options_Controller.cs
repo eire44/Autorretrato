@@ -11,10 +11,7 @@ public class options_Controller : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("click");
         checkAnswer = !checkAnswer;
-
-        Debug.Log(checkAnswer);
 
         if(checkAnswer)
         {

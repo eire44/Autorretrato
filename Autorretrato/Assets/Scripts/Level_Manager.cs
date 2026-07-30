@@ -7,4 +7,6 @@ public class Level_Manager : MonoBehaviour
     public static int levelIndex = 0;
     public List<Level> levels = new List<Level>();
     [HideInInspector] public static int previousLevel_TasksAmount = 0;
+    public List<Sprite> calendarSprites = new List<Sprite>();
+    public SpriteRenderer calendar;
 }

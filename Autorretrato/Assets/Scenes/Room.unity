@@ -15969,6 +15969,15 @@ MonoBehaviour:
     dropZonesAmount: 5
     levelMessage: Everything is time consuming, every day feels the same, everything
       starts feeling like a burden...
+  calendarSprites:
+  - {fileID: 21300000, guid: b3f931cd6104484469b76ea74ea7248a, type: 3}
+  - {fileID: 21300000, guid: b9e5d51e5292ee843af894158edc697c, type: 3}
+  - {fileID: 21300000, guid: 5c8dd2c74dc764349807e5a46deb7f7d, type: 3}
+  - {fileID: 21300000, guid: de815720a851cfe478e9a8f2b3eb90c5, type: 3}
+  - {fileID: 21300000, guid: 846b41a04644a8641b06ca1bda3b1a6f, type: 3}
+  - {fileID: 21300000, guid: 77b397eb2fc41be458577b13ce922dde, type: 3}
+  - {fileID: 21300000, guid: 1af165ec71e37304c8de30cdb48fbaae, type: 3}
+  calendar: {fileID: 1725256685}
 --- !u!4 &947331321
 Transform:
   m_ObjectHideFlags: 0
@@ -20573,7 +20582,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d6b06ee0cd8eec45b229312a31c6bdd, type: 2}
+  - {fileID: 2100000, guid: b2415ceeee4938b45a7e5f0a80c1e304, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33488,6 +33497,90 @@ MonoBehaviour:
   draggedObject: {fileID: 0}
   droppedAudio: {fileID: 513242309}
   changeScale: 1
+--- !u!1 &1725256684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725256686}
+  - component: {fileID: 1725256685}
+  m_Layer: 0
+  m_Name: Calendar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1725256685
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725256684}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 21300000, guid: b3f931cd6104484469b76ea74ea7248a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1725256686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725256684}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.1119494, y: 0.7794182, z: 0.034128256}
+  m_LocalScale: {x: 0.59632033, y: 0.59632033, z: 0.59632033}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1792144984}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1731429858
 GameObject:
   m_ObjectHideFlags: 0
@@ -34517,6 +34610,7 @@ Transform:
   - {fileID: 1226848441}
   - {fileID: 119894580}
   - {fileID: 2037510300}
+  - {fileID: 1725256686}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1801529465
