@@ -46,6 +46,7 @@ public class Forms_Controller : PuzzleManager
             {
                 if (!o.checkAnswer)
                 {
+                    Debug.Log("sin tildar");
                     return false;
                 }
             }
@@ -53,6 +54,7 @@ public class Forms_Controller : PuzzleManager
             {
                 if (o.checkAnswer)
                 {
+                    Debug.Log("check incorrecto");
                     return false;
                 }
             }
@@ -91,5 +93,10 @@ public class Forms_Controller : PuzzleManager
 
         greenCheck1.SetActive(false);
         greenCheck2.SetActive(false);
+
+        foreach (options_Controller o in options)
+        {
+            o.checkAnswer = false;
+        }
     }
 }
