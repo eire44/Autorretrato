@@ -22250,7 +22250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1123726204
 Transform:
   m_ObjectHideFlags: 0
@@ -30634,7 +30634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1424624727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33400,7 +33400,7 @@ GameObject:
   - component: {fileID: 1581981984}
   - component: {fileID: 1581981985}
   - component: {fileID: 1581981986}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: tablero2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

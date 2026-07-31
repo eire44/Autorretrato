@@ -14,6 +14,9 @@ public class Gym_Controller : PuzzleManager
     public GameObject taskScreen;
     bool playAudioOnce = false;
 
+    List<DropZone> leftDisks_Spawned = new List<DropZone>();
+    List<DropZone> rightDisks_Spawned = new List<DropZone>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +53,9 @@ public class Gym_Controller : PuzzleManager
                 leftDisks[i].gameObject.transform.localScale = new Vector3(leftDisks[i].gameObject.transform.localScale.x, 2f, leftDisks[i].gameObject.transform.localScale.z);
                 rightDisks[i].gameObject.transform.localScale = new Vector3(rightDisks[i].gameObject.transform.localScale.x, 2f, rightDisks[i].gameObject.transform.localScale.z);
             }
+
+            leftDisks_Spawned.Add(leftDisks[i]);
+            rightDisks_Spawned.Add(rightDisks[i]);
         }
     }
 
@@ -57,7 +63,7 @@ public class Gym_Controller : PuzzleManager
     {
         if (taskScreen.activeInHierarchy)
         {
-            if (checkDumbbellsSetUp(leftDisks) && checkDumbbellsSetUp(rightDisks))
+            if (checkDumbbellsSetUp(leftDisks_Spawned) && checkDumbbellsSetUp(rightDisks_Spawned))
             {
                 if (!playAudioOnce)
                 {
