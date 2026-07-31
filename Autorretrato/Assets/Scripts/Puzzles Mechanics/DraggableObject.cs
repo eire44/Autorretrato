@@ -56,7 +56,15 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        Vector3 mousePos = Input.mousePosition;
+
+        float halfWidth = rectTransform.rect.width * rectTransform.lossyScale.x / 2f;
+        float halfHeight = rectTransform.rect.height * rectTransform.lossyScale.y / 2f;
+
+        mousePos.x = Mathf.Clamp(mousePos.x, halfWidth, Screen.width - halfWidth);
+        mousePos.y = Mathf.Clamp(mousePos.y, halfHeight, Screen.height - halfHeight);
+
+        transform.position = mousePos;
     }
 
     public virtual void OnEndDrag(PointerEventData eventData)
