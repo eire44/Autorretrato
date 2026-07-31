@@ -46,9 +46,6 @@ public class check_AgendaFilled : PuzzleManager
                 if (agenda_Controller.dropZones[i].draggablePlaced)
                 {
                     selectedTasksAmount++;
-                    //Debug.Log(agenda_Controller.dropZones[i].name);
-                    //Debug.Log("NO LLENO");
-                    //return false;
                 }
             }
         }
@@ -61,8 +58,5 @@ public class check_AgendaFilled : PuzzleManager
         {
             return false;
         }
-
-        //Debug.Log("LLENO");
-        //return true;
     }
 }

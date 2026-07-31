@@ -11,8 +11,8 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public DropZone zone;
     RectTransform rectTransform;
-    Vector2 originalSize;
-    Vector3 originalScale;
+    [HideInInspector] public Vector2 originalSize;
+    [HideInInspector] public Vector3 originalScale;
     [HideInInspector] public bool draggablePlaced = false;
     public AudioSource draggableAudio;
     [HideInInspector] public bool dragging = false;
