@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class options_Controlller : MonoBehaviour
@@ -10,6 +11,8 @@ public class options_Controlller : MonoBehaviour
     public Slider musicSlider;
     public Slider sfxSlider;
     public Slider turntableSlider;
+
+    public float previousMusicVolume;
     void Start()
     {
         float music = PlayerPrefs.GetFloat("Music_Volume", 1f);
@@ -57,5 +60,17 @@ public class options_Controlller : MonoBehaviour
         float safeVolume = Mathf.Clamp(curved, 0.0001f, 1f);
         audioMixer.SetFloat("TurntableVolume", Mathf.Log10(safeVolume) * 20);
         PlayerPrefs.SetFloat("Turntable_Volume", volume);
+    }
+
+    public void lowerMusicForTurntable(float volume)
+    {
+        previousMusicVolume = musicSlider.value;
+
+        float curved = volume * volume;
+
+        float safeVolume = Mathf.Clamp(curved, 0.0001f, 1f);
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(safeVolume) * 20);
+
+        musicSlider.value = volume;
     }
 }

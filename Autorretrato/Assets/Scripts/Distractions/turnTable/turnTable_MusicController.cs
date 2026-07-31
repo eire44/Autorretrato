@@ -13,6 +13,7 @@ public class turnTable_MusicController : MonoBehaviour
     HashSet<string> musicPlayed = new HashSet<string>();
 
     string songPlaying = "No music playing";
+    bool playing = false;
     //turntable_playMusic song;
     private void Start()
     {
@@ -50,6 +51,8 @@ public class turnTable_MusicController : MonoBehaviour
                     txtSong.text = songPlaying;
                     audioSource.PlayOneShot(song.clipToPlay);
                     musicPlayed.Add(song.songName);
+                    FindObjectOfType<options_Controlller>().lowerMusicForTurntable(0.25f);
+                    playing = true;
                 }
             }
 
@@ -58,6 +61,11 @@ public class turnTable_MusicController : MonoBehaviour
         {
             txtSong.text = "No music playing";
             audioSource.Stop();
+            if(playing)
+            {
+                FindObjectOfType<options_Controlller>().lowerMusicForTurntable(FindObjectOfType<options_Controlller>().previousMusicVolume);
+                playing = false;
+            }
             FindObjectOfType<DistractionsManager>().activateFeedback(false);
             playSong = true;
         }
