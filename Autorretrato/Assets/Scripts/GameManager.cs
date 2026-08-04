@@ -128,10 +128,10 @@ public class GameManager : MonoBehaviour
             energyAmount = 2;
         }
 
-        float amount = 1f / (energyAmount * 2);
+        float amount = 1f / (energyAmount * 2.5f);
 
         if (!taskCompleted)
-            amount /= 5f;
+            amount /= 3f;
 
         energyFiller.fillAmount -= amount;
 

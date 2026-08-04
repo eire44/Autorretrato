@@ -42,13 +42,13 @@ public class checkTask_ReadBook : PuzzleManager
             {
                 if (!dropZone.draggablePlaced)
                 {
-                    Debug.Log("draggable sin placear");
+                    //Debug.Log("draggable sin placear");
                     return false;
                 }
                 else
                 {
-                    Debug.Log(dropZone.idCorrecto + " vs. ");
-                    Debug.Log(orderId);
+                    //Debug.Log(dropZone.idCorrecto + " vs. ");
+                    //Debug.Log(orderId);
                     if (dropZone.idCorrecto == orderId)
                     {
                         orderId++;
@@ -56,7 +56,7 @@ public class checkTask_ReadBook : PuzzleManager
                     else
                     {
                         orderId = 0;
-                        Debug.Log("id incorrecto");
+                        //Debug.Log("id incorrecto");
                         return false;
                     }
                 }

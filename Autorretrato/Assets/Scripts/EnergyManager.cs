@@ -23,6 +23,7 @@ public class EnergyManager : MonoBehaviour
 
     public void UpdateAesthetics(float energy)
     {
+        Debug.Log(energy);
         music.pitch = Mathf.Lerp(minPitch, maxPitch, energy);
         playerMovement.velocidad = Mathf.Lerp(minSpeed, maxSpeed, energy);
         tilemap.color = Color.Lerp(lowEnergyColor, Color.white, energy);

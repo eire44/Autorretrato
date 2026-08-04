@@ -9,11 +9,13 @@ public class TaskManager : MonoBehaviour
     public bool isAgenda;
     public AudioSource uiClick;
     public string txtDialog;
-    Dialogs_Controller dialogsController;
+    Dialogs_Controller dialogsController; 
+    GameManager gm;
 
     private void Start()
     {
-        dialogsController = FindObjectOfType<Dialogs_Controller>(); 
+        dialogsController = FindObjectOfType<Dialogs_Controller>();
+        gm = FindObjectOfType<GameManager>();
     }
 
     public void openTaskUI()
@@ -21,6 +23,7 @@ public class TaskManager : MonoBehaviour
         uiClick.Play();
         taskUI.SetActive(true);
         HUD.SetActive(false);
+        gm.reduceEnergy(false);
         Time.timeScale = 0f;
     }
 
@@ -33,7 +36,7 @@ public class TaskManager : MonoBehaviour
         
         PuzzleManager checkTask = gameObject.GetComponent<PuzzleManager>();
         checkTask.feedbackBubble.SetActive(false);
-        GameManager gm = FindObjectOfType<GameManager>();
+        
         if (checkTask != null)
         {
             if (checkTask.puzzleSolved)
@@ -52,10 +55,10 @@ public class TaskManager : MonoBehaviour
                 }
                 dialogsController.changeDialogTxt("You did it!! One task less, " + gm.tasksLeft + " to go.");
             }
-            else
-            {
-                gm.reduceEnergy(false);
-            }
+            //else
+            //{
+            //    gm.reduceEnergy(false);
+            //}
         }
     }
 

@@ -17,6 +17,9 @@ public class Forms_Controller : PuzzleManager
     bool playAudioOnce = false;
     public GameObject greenCheck1;
     public GameObject greenCheck2;
+
+    public AudioSource correctAnswer_Audio;
+    public AudioSource incorrectAnswer_Audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +28,14 @@ public class Forms_Controller : PuzzleManager
 
     public void submitAnswer()
     {
-        //sonidos bien o mal
         if (checkAnswer())
         {
+            correctAnswer_Audio.Play();
             correctAnswer();
         }
         else
         {
+            incorrectAnswer_Audio.Play();
             playAudioOnce = false;
             puzzleSolved = false;
             activateFeedback(false, feedbackBubble);
