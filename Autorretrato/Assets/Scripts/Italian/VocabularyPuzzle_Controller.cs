@@ -16,6 +16,9 @@ public class VocabularyPuzzle_Controller : PuzzleManager
 
     public Color color_CorrectOption;
     public Color color_WrongOption;
+
+    public AudioSource correct_Audio;
+    public AudioSource wrong_Audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,12 +36,14 @@ public class VocabularyPuzzle_Controller : PuzzleManager
                 {
                     imgSquares[index].color = color_CorrectOption;
                     //coroutine esperar
+                    correct_Audio.Play();
                     correctAnswer();
                 }
                 else
                 {
                     imgSquares[index].color = color_WrongOption;
 
+                    wrong_Audio.Play();
                     playAudioOnce = false;
                     puzzleSolved = false;
                     activateFeedback(false, feedbackBubble);
