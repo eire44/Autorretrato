@@ -2279,7 +2279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &106847133
 Transform:
   m_ObjectHideFlags: 0
@@ -17689,46 +17689,79 @@ MonoBehaviour:
     levelMessage: "Press W-A-S-D to move.\nYou can use your mouse to interact. \nDistractions
       will help you not to get exhausted."
   - tasks:
-    - taskName: Put my clothes away
-      taskObject: {fileID: 1632517113}
+    - taskName: Complete the game scene
+      taskObject: {fileID: 580844342}
     - taskName: Draw portrait
       taskObject: {fileID: 1767984423}
-    - taskName: Take the Green Cross exam
-      taskObject: {fileID: 1145277259}
+    - taskName: Train with dumbbells
+      taskObject: {fileID: 2025160222}
     leisureStuff:
-    - {fileID: 1952151156}
+    - {fileID: 1539267913}
     - {fileID: 991023542}
     dropZonesAmount: 2
     levelMessage: "Yesterday was fun, but I surely could have done more with that
       time. Let\xB4s do more today!"
   - tasks:
-    - taskName: Complete the game scene
-      taskObject: {fileID: 580844342}
-    - taskName: Do my chess homework
-      taskObject: {fileID: 1581981981}
-    - taskName: Reread the book
-      taskObject: {fileID: 480429781}
+    - taskName: Put my clothes away
+      taskObject: {fileID: 1632517113}
+    - taskName: Train with dumbbells
+      taskObject: {fileID: 2025160222}
+    - taskName: Take the Green Cross training course
+      taskObject: {fileID: 1145277259}
     leisureStuff:
     - {fileID: 22548768}
-    - {fileID: 1539267913}
-    dropZonesAmount: 3
-    levelMessage: "I still feel like I could do more. \nAlso, maybe I should reread
-      the book, so I can understand it in greater depth."
+    - {fileID: 1952151156}
+    dropZonesAmount: 2
+    levelMessage: 'I have a lot more stuff to do.
+
+      Let''s keep crossing off
+      tasks.'
   - tasks:
     - taskName: Put my clothes away
       taskObject: {fileID: 1632517113}
-    - taskName: Do the portrait homework
-      taskObject: {fileID: 1767984423}
-    - taskName: Do my italian homework
-      taskObject: {fileID: 1580027883}
+    - taskName: Keep training
+      taskObject: {fileID: 2025160222}
+    - taskName: Practice chess tactics
+      taskObject: {fileID: 1581981981}
     - taskName: Do programming homework
       taskObject: {fileID: 195155834}
     leisureStuff:
     - {fileID: 1539267913}
+    - {fileID: 22548768}
+    dropZonesAmount: 3
+    levelMessage: "I still feel like I could do more. \nJoining more activities will
+      make me feel more fulfilled."
+  - tasks:
+    - taskName: Do my italian homework
+      taskObject: {fileID: 1580027883}
+    - taskName: Do my portrait homework
+      taskObject: {fileID: 1767984423}
+    - taskName: Complete the game scene
+      taskObject: {fileID: 580844342}
+    - taskName: Do my chess homework
+      taskObject: {fileID: 1581981981}
+    leisureStuff:
     - {fileID: 991023542}
+    - {fileID: 1952151156}
     dropZonesAmount: 4
     levelMessage: "I have so much pending homework!! \nPlease help me to catch up
       with it!!!"
+  - tasks:
+    - taskName: Keep training
+      taskObject: {fileID: 2025160222}
+    - taskName: Take the Green Cross exam
+      taskObject: {fileID: 1145277259}
+    - taskName: Do my italian homework
+      taskObject: {fileID: 1580027883}
+    - taskName: Finish reading the book
+      taskObject: {fileID: 480429781}
+    - taskName: Put my clothes away
+      taskObject: {fileID: 1632517113}
+    leisureStuff:
+    - {fileID: 991023542}
+    dropZonesAmount: 4
+    levelMessage: 'So many responsibilities on my shoulders, sometimes it''s hard
+      to handle them all, but giving up would mean losing all the progress '
   - tasks:
     - taskName: Get ready to meet my boyfriend
       taskObject: {fileID: 22548768}
@@ -17736,12 +17769,11 @@ MonoBehaviour:
       taskObject: {fileID: 1952151156}
     - taskName: Do more chess homework
       taskObject: {fileID: 1581981981}
-    - taskName: Complete the game scene
-      taskObject: {fileID: 580844342}
-    - taskName: Put my clothes away
-      taskObject: {fileID: 1632517113}
-    leisureStuff:
-    - {fileID: 991023542}
+    - taskName: Draw portrait
+      taskObject: {fileID: 1767984423}
+    - taskName: Do programming homework
+      taskObject: {fileID: 195155834}
+    leisureStuff: []
     dropZonesAmount: 5
     levelMessage: Everything is time consuming, every day feels the same, everything
       starts feeling like a burden...
@@ -24971,7 +25003,7 @@ GameObject:
   - component: {fileID: 1145277264}
   - component: {fileID: 1145277265}
   m_Layer: 6
-  m_Name: PC Grenn Cross
+  m_Name: PC Green Cross
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40712,7 +40744,7 @@ GameObject:
   - component: {fileID: 2025160226}
   - component: {fileID: 2025160227}
   - component: {fileID: 2025160228}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
