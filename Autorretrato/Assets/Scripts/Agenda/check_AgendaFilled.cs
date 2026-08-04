@@ -38,25 +38,28 @@ public class check_AgendaFilled : PuzzleManager
 
     public override bool checkIfTaskCompleted(GameObject taskUI)
     {
-        int selectedTasksAmount = 0;
+        //int selectedTasksAmount = 0;
         for (int i = 0; i < agenda_Controller.dropZones.Length; i++)
         {
             if(agenda_Controller.dropZones[i].gameObject.activeInHierarchy)
             {
-                if (agenda_Controller.dropZones[i].draggablePlaced)
+                if (!agenda_Controller.dropZones[i].draggablePlaced)
                 {
-                    selectedTasksAmount++;
+                    return false;
+                    //selectedTasksAmount++;
                 }
             }
         }
 
-        if(selectedTasksAmount >= 1)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return true;
+
+        //if(selectedTasksAmount >= 1)
+        //{
+        //    return true;
+        //}
+        //else
+        //{
+        //    return false;
+        //}
     }
 }

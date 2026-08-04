@@ -23,7 +23,10 @@ public class TaskManager : MonoBehaviour
         uiClick.Play();
         taskUI.SetActive(true);
         HUD.SetActive(false);
-        gm.reduceEnergy(false);
+        if (!isAgenda)
+        {
+            gm.reduceEnergy(false);
+        }
         Time.timeScale = 0f;
     }
 
