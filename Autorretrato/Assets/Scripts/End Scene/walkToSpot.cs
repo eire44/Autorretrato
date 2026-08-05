@@ -49,6 +49,6 @@ public class walkToSpot : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
 
         pantallaFinal.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 }
