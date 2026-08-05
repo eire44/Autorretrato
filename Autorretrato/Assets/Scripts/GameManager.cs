@@ -127,12 +127,15 @@ public class GameManager : MonoBehaviour
         {
             energyAmount = 2;
         }
+        //Debug.Log(energyAmount + " energy amount");
 
-        float amount = 1f / (energyAmount * 2.5f);
+        //float amount = 1f / (energyAmount * 2.5f);
+        float amount = 0.2f;
 
         if (!taskCompleted)
-            amount /= 3f;
+            amount /= 2f;
 
+        //Debug.Log(amount + " reduced");
         energyFiller.fillAmount -= amount;
 
         checkEnergy();
