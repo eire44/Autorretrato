@@ -9,7 +9,6 @@ public class Merienda_Puzzle_Controller : MonoBehaviour
 {
     public List<DropZone> platesList = new List<DropZone>();
     public List<DraggableObject> foodList = new List<DraggableObject>();
-    bool puzzleSolved = false;
 
     public GameObject Bubble;
     public Player_Interact player_Interact;

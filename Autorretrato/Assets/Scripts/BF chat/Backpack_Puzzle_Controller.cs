@@ -6,7 +6,6 @@ using UnityEngine;
 public class Backpack_Puzzle_Controller : MonoBehaviour
 {
     public List<GameObject> stuff = new List<GameObject>();
-    bool puzzleSolved = false;
 
     public GameObject Bubble;
     public Player_Interact player_Interact;

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    int levelIndex = 0;
     int completeTasksIndex = 0;
     [HideInInspector] public int tasksLeft = 0;
     public GameObject HUD;
@@ -17,7 +16,6 @@ public class GameManager : MonoBehaviour
     public UI_Controller UI_Controller;
     public EnergyManager energyManager;
 
-    int tasksNumber = 3;
     Level_Manager level_Manager;
 
     void Start()
@@ -26,7 +24,6 @@ public class GameManager : MonoBehaviour
 
         level_Manager.calendar.sprite = level_Manager.calendarSprites[Level_Manager.levelIndex];
 
-        //tasksLeft = tasksNumber;
         int tasksAmount = level_Manager.levels[Level_Manager.levelIndex].tasks.Count;
 
         agenda = FindObjectOfType<Agenda_Controller>();

@@ -7,7 +7,6 @@ public class Incense_Puzzle_Controller : MonoBehaviour
 {
     public DragIncense incense;
     public GameObject smoke;
-    bool puzzleSolved = false;
     public GameObject Bubble;
     public GameObject SahumerioSet;
     public Player_Interact player_Interact;
