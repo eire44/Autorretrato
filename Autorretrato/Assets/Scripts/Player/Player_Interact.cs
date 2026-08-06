@@ -37,7 +37,7 @@ public class Player_Interact : MonoBehaviour
             else if (onFinalDoorArea)
             {
                 Level_Manager.levelIndex = 0;
-                Time.timeScale = 0f;
+                //Time.timeScale = 0f;
                 SceneManager.LoadScene("End Scene");
             }
             else if (onInteractiveArea)

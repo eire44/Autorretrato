@@ -39,7 +39,7 @@ public class shiningObjects : MonoBehaviour
     {
         if(isDoor)
         {
-            if(Level_Manager.levelIndex + 1 >= level_Manager.levels.Count)
+            if (Level_Manager.levelIndex + 1 >= level_Manager.levels.Count)
             {
                 StartCoroutine(FadeInCoroutine());
                 player_Interact.onFinalDoorArea = true;
