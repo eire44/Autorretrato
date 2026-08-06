@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -9,11 +10,13 @@ public class shiningObjects : MonoBehaviour
     [SerializeField] private bool isDoor;
     Level_Manager level_Manager;
     Player_Interact player_Interact;
+    Dialogs_Controller dialogs_Controller;
 
     private void Start()
     {
         level_Manager = FindObjectOfType<Level_Manager>();
         player_Interact = FindObjectOfType<Player_Interact>();
+        dialogs_Controller = FindObjectOfType<Dialogs_Controller>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,6 +43,12 @@ public class shiningObjects : MonoBehaviour
             {
                 StartCoroutine(FadeInCoroutine());
                 player_Interact.onFinalDoorArea = true;
+
+
+                if (dialogs_Controller != null)
+                {
+                    dialogs_Controller.changeDialogTxt("Maybe I could just go out for a bit, get some rest. There's no need to do everything right now.");
+                }
             }
         } else
         {
@@ -55,6 +64,12 @@ public class shiningObjects : MonoBehaviour
             {
                 StartCoroutine(FadeOutCoroutine());
                 player_Interact.onFinalDoorArea = false;
+
+
+                if (dialogs_Controller != null)
+                {
+                    dialogs_Controller.changeDialogTxt("...");
+                }
             }
         }
         else

@@ -17525,7 +17525,7 @@ MonoBehaviour:
       taskObject: {fileID: 1632517113}
     - taskName: Train with dumbbells
       taskObject: {fileID: 2025160222}
-    - taskName: Take the Green Cross training course
+    - taskName: Take the Green Cross course
       taskObject: {fileID: 1145277259}
     leisureStuff:
     - {fileID: 22548768}
@@ -35487,8 +35487,8 @@ MonoBehaviour:
   - {fileID: 403540768}
   color_CorrectOption: {r: 0.62352943, g: 0.9019608, b: 0.6509804, a: 1}
   color_WrongOption: {r: 0.87169814, g: 0.36037338, b: 0.320719, a: 1}
-  correct_Audio: {fileID: 0}
-  wrong_Audio: {fileID: 0}
+  correct_Audio: {fileID: 327350796}
+  wrong_Audio: {fileID: 1919814693}
 --- !u!1 &1581258378
 GameObject:
   m_ObjectHideFlags: 0
@@ -36579,6 +36579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSpot: {fileID: 1613700113}
+  looking: 0
 --- !u!1 &1620030716
 GameObject:
   m_ObjectHideFlags: 0

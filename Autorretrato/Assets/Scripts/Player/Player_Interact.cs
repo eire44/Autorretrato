@@ -15,10 +15,12 @@ public class Player_Interact : MonoBehaviour
     GameObject currentDistractionObject;
     //public Color bubbleColor_Off;
     sneakPeak sneakPeak;
+    Dialogs_Controller dialogs_Controller;
 
     private void Start()
     {
         sneakPeak = FindObjectOfType<sneakPeak>();
+        dialogs_Controller = FindObjectOfType<Dialogs_Controller>();
     }
 
     void Update()
@@ -84,6 +86,7 @@ public class Player_Interact : MonoBehaviour
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Outer Views"))
         {
             onOuterViewArea = true;
+            onArea(Color.white, collision.transform, "There is such a nice view from this window. I could go there sometime, when I have time.");
         }
     }
     
@@ -102,8 +105,6 @@ public class Player_Interact : MonoBehaviour
         {
             disrtactionBubble.GetComponent<Renderer>().material.color = color;
         }
-
-        Dialogs_Controller dialogs_Controller = FindObjectOfType<Dialogs_Controller>();
 
         if (dialogs_Controller != null)
         {
@@ -129,6 +130,7 @@ public class Player_Interact : MonoBehaviour
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Outer Views"))
         {
             onOuterViewArea = false;
+            onArea(Color.white, collision.transform, "...");
         }
     }
 
